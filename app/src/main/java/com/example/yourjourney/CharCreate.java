@@ -9,10 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class CharCreate extends AppCompatActivity {
 
     public TextView login;
-    public ImageView avatar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,12 @@ public class CharCreate extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         login = findViewById(R.id.tv_login);
+
+
+        public static ArrayList<CharCreate> lista = new ArrayList<>();
+
+        public String toString()
+        {return this.nazwa + " "+this.Imie+ "\nData urodzenia: "+this.dataUrodzenia+ "\nWydział: "+this.Wydzial+ "\nŚrednia: "+this.Srednia+ "\n\n\n"+ "\nŚrednia: "+this.Srednia;}
     }
 
 
@@ -36,4 +44,8 @@ public class CharCreate extends AppCompatActivity {
         Intent loadSwitch = new Intent(getApplicationContext(), CharCreate.class);
         startActivity(loadSwitch);
     }
+
+
+
+
 }

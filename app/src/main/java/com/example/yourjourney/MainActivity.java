@@ -1,49 +1,39 @@
-package com.example.yourjourney;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.yourjourney.CharCreate;
+import com.example.yourjourney.R;
 
-public class CharCreate extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    public TextView login;
-
+    public TextView title;
+    public Button start_btn;
+    public Button load_btn;
+    public Button exit_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
-        login = findViewById(R.id.tv_login);
-
-        public static ArrayList<CharCreate> lista = new ArrayList<>();
-
-        public String toString()
-        {return this.nazwa + " "+this.Imie+ "\nData urodzenia: "+this.dataUrodzenia+ "\nWydział: "+this.Wydzial+ "\nŚrednia: "+this.Srednia+ "\n\n\n"+ "\nŚrednia: "+this.Srednia;}
     }
 
-
-    public void back(View v) {
-        Intent menuSwitch = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(menuSwitch);
+    public void start(View v) {
+        Intent startSwitch = new Intent(getApplicationContext(), CharCreate.class);
+        startActivity(startSwitch);
     }
 
-
-    public void reset(View v) {
-        login.setText("");
-    }
-
-    public void confirm(View v) {
+    public void load(View v) {
         Intent loadSwitch = new Intent(getApplicationContext(), CharCreate.class);
         startActivity(loadSwitch);
     }
 
-
-
-
+    public void exit(View v) {
+        System.exit(0);
+    }
 }
