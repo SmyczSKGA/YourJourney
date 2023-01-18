@@ -21,9 +21,6 @@ public class CharCreate extends AppCompatActivity {
 
         login = findViewById(R.id.tv_login);
 
-
-
-
         public static ArrayList<CharCreate> lista = new ArrayList<>();
 
         public String toString()
