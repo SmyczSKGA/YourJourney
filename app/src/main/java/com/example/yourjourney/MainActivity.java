@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.yourjourney.CharCreate;
@@ -22,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (Creatures.CreatureList.isEmpty()) {
+            new Creatures.Creature("Wojownik", "3", "3", "0", "");
+            new Creatures.Creature("Mag", "5", "1", "0", "");
+            new Creatures.Creature("Łucznik", "1", "5", "0", "");
+            new Creatures.Creature("Dzik", "2", "3", "1", "");
+            new Creatures.Creature("Goblin", "4", "3", "1", "");
+            new Creatures.Creature("Ork", "5", "5", "1", "");
+        }
 
     }
 
