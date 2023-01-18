@@ -36,6 +36,7 @@ public class CharCreate extends AppCompatActivity {
         startActivity(menuSwitch);
     }
 
+
     public void reset(View v) {
         login.setText("");
     }
