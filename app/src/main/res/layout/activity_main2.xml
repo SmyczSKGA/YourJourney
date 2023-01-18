@@ -125,7 +125,7 @@
 
                     <TextView
                         android:id="@+id/Pusty_obrona"
-                        android:layout_width="208dp"
+                        android:layout_width="211dp"
                         android:layout_height="wrap_content"
                         android:text="Obrona:" />
 
@@ -146,13 +146,13 @@
                         android:id="@+id/Pusty_obr"
                         android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:text="Obrażenia:" />
+                        android:text="Atak:" />
 
                     <TextView
-                        android:id="@+id/tv_obrazenia"
+                        android:id="@+id/tv_atak"
                         android:layout_width="201dp"
                         android:layout_height="wrap_content"
-                        android:text="Wartość_obrazenia" />
+                        android:text="Wartość_ataku" />
                 </TableRow>
 
                 <TableRow
