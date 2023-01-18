@@ -23,11 +23,10 @@ public class Creatures extends AppCompatActivity {
     }
 
     Creature creature0 = new Creature("Wojownik", "3", "3", "0", "");
-    Creature creature1 = new Creature("Berserker", "5", "1", "0", "");
-    Creature creature2 = new Creature("Łotrzyk", "1", "5", "0", "");
+    Creature creature1 = new Creature("Mag", "5", "1", "0", "");
+    Creature creature2 = new Creature("Łucznik", "1", "5", "0", "");
     Creature creature3 = new Creature("Dzik", "2", "3", "1", "");
     Creature creature4 = new Creature("Goblin", "4", "3", "2", "");
     Creature creature5 = new Creature("Ork", "5", "5", "4", "");
 
-    ArrayList<Creature> arrayCreatures = new ArrayList<Creature>();
 }
