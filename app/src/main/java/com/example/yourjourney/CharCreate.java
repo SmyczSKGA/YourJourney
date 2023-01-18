@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class CharCreate extends AppCompatActivity {
 
+    public ArrayList lista;
     public TextView login;
 
 
@@ -24,7 +25,7 @@ public class CharCreate extends AppCompatActivity {
         login = findViewById(R.id.tv_login);
 
 
-        public static ArrayList<CharCreate> lista = new ArrayList<>();
+         ArrayList<CharCreate> lista = new ArrayList<>();
 
         public String toString()
         {return this.nazwa + " "+this.Imie+ "\nData urodzenia: "+this.dataUrodzenia+ "\nWydział: "+this.Wydzial+ "\nŚrednia: "+this.Srednia+ "\n\n\n"+ "\nŚrednia: "+this.Srednia;}

@@ -59,7 +59,8 @@
 
                     <RadioGroup
                         android:layout_width="122dp"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF">
 
                         <RadioButton
                             android:id="@+id/b_woj"
@@ -92,15 +93,71 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="398dp"
-                    android:layout_height="206dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
 
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="163dp"
+                    android:layout_height="29dp">
+
+                    <TextView
+                        android:id="@+id/Pusty_HP"
+                        android:layout_width="202dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Punkty HP:" />
+
+                    <TextView
+                        android:id="@+id/tv_hp"
+                        android:layout_width="202dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wartosc_HP" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/Pusty_obrona"
+                        android:layout_width="208dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obrona:" />
+
+                    <TextView
+                        android:id="@+id/tv_obrona"
+                        android:layout_width="203dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wartosc_obrona" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/Pusty_obr"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obrażenia:" />
+
+                    <TextView
+                        android:id="@+id/tv_obrazenia"
+                        android:layout_width="201dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wartość_obrazenia" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
                     android:layout_weight="1"
                     android:gravity="bottom">
 
@@ -132,6 +189,7 @@
                         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
                 </TableRow>
+
             </LinearLayout>
 
         </LinearLayout>
