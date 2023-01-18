@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="432dp"
+            app:srcCompat="@drawable/logo" />
+
+        <Button
+            android:id="@+id/b_start"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#575757"
+            android:onClick="start"
+            android:text="Start"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/b_load"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#575757"
+            android:onClick="load"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/b_exit"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#575757"
+            android:onClick="exit"
+            android:text="Exit" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

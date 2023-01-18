@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharCreate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Wpisz swój nick" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Wybierz klasę bohatera"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="196dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/lv_postaci"
+                        android:layout_width="281dp"
+                        android:layout_height="194dp"
+                        android:minHeight="48dp">
+
+                    </ListView>
+
+                    <RadioGroup
+                        android:layout_width="122dp"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/b_woj"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wybierz" />
+
+                        <RadioButton
+                            android:id="@+id/b_lucznik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wybierz" />
+
+                        <RadioButton
+                            android:id="@+id/b_mag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wybierz" />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="398dp"
+                    android:layout_height="206dp"
+
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="163dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+                    <Button
+                        android:id="@+id/b_wroc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#575757"
+                        android:onClick="back"
+                        android:text="Wróć" />
+
+                    <Button
+                        android:id="@+id/b_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#575757"
+                        android:onClick="reset"
+                        android:text="Reset" />
+
+                    <Button
+                        android:id="@+id/b_zatwierdz"
+                        android:layout_width="131dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#575757"
+                        android:onClick="confirm"
+                        android:text="Zatwierdź"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                </TableRow>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
