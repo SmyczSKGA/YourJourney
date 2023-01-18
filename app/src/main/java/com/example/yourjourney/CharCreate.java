@@ -28,7 +28,6 @@ public class CharCreate extends AppCompatActivity {
 
     public void reset(View v) {
         login.setText("");
-        Toast.makeText(get)
     }
 
     public void confirm(View v) {
