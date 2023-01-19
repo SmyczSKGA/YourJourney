@@ -13,7 +13,9 @@
         android:gravity="top"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp">
+        tools:layout_editor_absoluteX="-16dp"
+        android:layout_margin="20dp"
+        >
 
         <TextView
             android:id="@+id/textView2"
