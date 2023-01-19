@@ -22,6 +22,11 @@ public class Creatures extends AppCompatActivity {
             this.img = img;
             CreatureList.add(this);
         }
+        public static ArrayList<Creature> CreatureList = new ArrayList<Creature>();
+        @Override
+        public String toString(){
+            return "Name="+name+attack+defence+gold;
+            }
     }
 
 //    Creature creature0 = new Creature("Wojownik", "3", "3", "0", "");
@@ -31,6 +36,5 @@ public class Creatures extends AppCompatActivity {
 //    Creature creature4 = new Creature("Goblin", "4", "3", "1", "");
 //    Creature creature5 = new Creature("Ork", "5", "5", "1", "");
 
-    public static ArrayList<Creature> CreatureList = new ArrayList<Creature>();
 
 }

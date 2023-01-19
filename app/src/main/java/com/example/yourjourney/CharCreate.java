@@ -1,6 +1,7 @@
 package com.example.yourjourney;
 
 import androidx.appcompat.app.AppCompatActivity;
+import static com.example.yourjourney.Creatures.Creature.CreatureList;
 
 import android.content.Intent;
 import android.os.Bundle;
