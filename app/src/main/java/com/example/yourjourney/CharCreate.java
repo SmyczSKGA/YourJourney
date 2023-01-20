@@ -38,7 +38,9 @@ public class CharCreate extends AppCompatActivity {
     TextView ATK;
     TextView DEF;
     Toast NoUser;
+    Toast NoClass;
     Button b_zatwierdz;
+    ImageView iv_sakwa;
     int Gold;
 
 
@@ -54,6 +56,7 @@ public class CharCreate extends AppCompatActivity {
         ATK = findViewById(R.id.tv_atak);
         DEF = findViewById(R.id.tv_obrona);
         Gold = 0;
+        iv_sakwa = findViewById(R.id.iv_sakwa);
 
         Heroes = getResources().getStringArray(R.array.characters);
 
@@ -67,8 +70,8 @@ public class CharCreate extends AppCompatActivity {
         lv_postaci.setOnItemClickListener(CharPreviewDesc);
 
         login = findViewById(R.id.tv_login);
-        NoUser = Toast.makeText(this, "",Toast.LENGTH_LONG);
-        NoUser.setText("Wpisz nazwę postaci");
+        NoUser = Toast.makeText(this, "Wpisz nazwę postaci",Toast.LENGTH_SHORT);
+        NoClass = Toast.makeText(this, "Wybierz swoją klasę", Toast.LENGTH_SHORT);
 
         b_zatwierdz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,41 +79,64 @@ public class CharCreate extends AppCompatActivity {
                 if (login.getText().toString().equals("")) {
                     NoUser.show();
                 }
-                else {
+                else if(lv_postaci.isItemChecked(0) == true) {
                     String filename = login.getText().toString();
-                    String content = HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString();
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
 
-                    try {
-                        saveTextAsFile(filename, content);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+
+                    saveTextAsFile(filename, content);
+
                     Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(loadSwitch);
                 }
+                else if(lv_postaci.isItemChecked(1) == true){
+                    String filename = login.getText().toString();
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+
+
+                    saveTextAsFile(filename, content);
+
+                    Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(loadSwitch);
+                }
+                else if(lv_postaci.isItemChecked(2) == true){
+                    String filename = login.getText().toString();
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+
+
+                    saveTextAsFile(filename, content);
+
+                    Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(loadSwitch);
+                }
+                else {
+                    NoClass.show();
+                }
             }
         });
-
     }
 
-    public void saveTextAsFile(String filename, String content) throws IOException {
+    public void saveTextAsFile(String filename, String content) {
         String fileName = filename + ".txt";
 
         //create
-        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), fileName);
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Documents/MyJourney", fileName);
 
         //write to
         try {
+            String rootPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Documents/MyJourney";
+            File root = new File(rootPath);
+            if (!root.exists()) {
+                root.mkdirs();
+            }
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(content.getBytes());
             fos.close();
             Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show();
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e){
             e.printStackTrace();
             Toast.makeText(this, "File not found!", Toast.LENGTH_SHORT).show();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(this, "Error occured!", Toast.LENGTH_SHORT).show();
         }
@@ -124,16 +150,19 @@ public class CharCreate extends AppCompatActivity {
                     HP.setText("7");
                     ATK.setText("3");
                     DEF.setText("3");
+                    iv_sakwa.setImageResource(R.drawable.woj_ikona);
                 }
                 if (lv_postaci.isItemChecked(1) == true) {
                     HP.setText("4");
                     ATK.setText("7");
                     DEF.setText("1");
+                    iv_sakwa.setImageResource(R.drawable.mag_ikona);
                 }
                 if (lv_postaci.isItemChecked(2) == true) {
                     HP.setText("5");
                     ATK.setText("2");
                     DEF.setText("5");
+                    iv_sakwa.setImageResource(R.drawable.lucznik_ikona);
                 }
             }
         };
