@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class CharCreate extends AppCompatActivity {
 
     public TextView login;
+    String[] Heroes;
+    ListView lv_postaci;
 
 
     @Override
@@ -24,9 +26,17 @@ public class CharCreate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        ArrayAdapter<Creatures> adapter = new ArrayAdapter<Creatures>(this, android.R.layout.simple_list_item_1);
-        ListView listView = (ListView) findViewById(R.id.lv_postaci);
-        listView.setAdapter(adapter);
+        lv_postaci = findViewById(R.id.lv_postaci);
+
+        Heroes = getResources().getStringArray(R.array.characters);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_single_choice,
+                Heroes);
+
+        lv_postaci.setAdapter(adapter);
+        lv_postaci.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         login = findViewById(R.id.tv_login);
 
