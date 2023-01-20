@@ -12,10 +12,12 @@ import java.util.*;
 public class Creatures extends AppCompatActivity {
 
     public static class Creature {
-        public final String name, attack, defence, gold, img;
+        public final String name, img;
+        public final int hp, attack, defence, gold;
 
-        public Creature(String name, String attack, String defence, String gold, String img) {
+        public Creature(String name, int hp, int attack, int defence, int gold, String img) {
             this.name = name;
+            this.hp = hp;
             this.attack = attack;
             this.defence = defence;
             this.gold = gold;
@@ -25,16 +27,8 @@ public class Creatures extends AppCompatActivity {
         public static ArrayList<Creature> CreatureList = new ArrayList<Creature>();
         @Override
         public String toString(){
-            return "Name="+name+attack+defence+gold;
+            return "Name="+name+hp+attack+defence+gold;
             }
     }
-
-//    Creature creature0 = new Creature("Wojownik", "3", "3", "0", "");
-//    Creature creature1 = new Creature("Mag", "5", "1", "0", "");
-//    Creature creature2 = new Creature("Łucznik", "1", "5", "0", "");
-//    Creature creature3 = new Creature("Dzik", "2", "3", "1", "");
-//    Creature creature4 = new Creature("Goblin", "4", "3", "1", "");
-//    Creature creature5 = new Creature("Ork", "5", "5", "1", "");
-
 
 }

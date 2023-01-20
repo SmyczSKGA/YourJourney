@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (Creatures.Creature.CreatureList.isEmpty()) {
-            new Creatures.Creature("Wojownik", "3", "3", "0", "");
-            new Creatures.Creature("Mag", "5", "1", "0", "");
-            new Creatures.Creature("Łucznik", "1", "5", "0", "");
-            new Creatures.Creature("Dzik", "2", "3", "1", "");
-            new Creatures.Creature("Goblin", "4", "3", "1", "");
-            new Creatures.Creature("Ork", "5", "5", "1", "");
+            new Creatures.Creature("Wojownik", 7,3, 3, 0, "");
+            new Creatures.Creature("Mag", 4, 7, 1, 0, "");
+            new Creatures.Creature("Łucznik", 5, 2, 5, 0, "");
+            new Creatures.Creature("Dzik", 4, 3, 1, 0, "");
+            new Creatures.Creature("Goblin", 5, 2, 4, 0, "");
+            new Creatures.Creature("Ork", 6, 5, 3, 0, "");
         }
 
         Log.i("Data",CreatureList.get(index).toString());
