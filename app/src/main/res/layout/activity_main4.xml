@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_main4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="Lokalizacje" />
+
+        <ImageView
+            android:id="@+id/iv_mapa"
+            android:layout_width="382dp"
+            android:layout_height="241dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <ListView
+            android:id="@+id/lv_mapa"
+            android:layout_width="match_parent"
+            android:layout_height="278dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/b_wroc"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:minWidth="48dp"
+                android:onClick="back"
+                android:text="Wróć" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+
+
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <Button
+                android:id="@+id/b_zatwierdz"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#575757"
+                android:onClick="confirm"
+                android:text="Zatwierdź">
+
+            </Button>
+
+        </TableRow>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

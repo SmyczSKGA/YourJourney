@@ -38,162 +38,113 @@
             android:text="Wybierz klasę bohatera"
             android:textSize="24sp" />
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/lv_postaci"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="49dp"
+            android:minHeight="48dp">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="196dp">
+        </ListView>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_sakwa"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
 
-                    <ListView
-                        android:id="@+id/lv_postaci"
-                        android:layout_width="281dp"
-                        android:layout_height="194dp"
-                        android:minHeight="48dp">
+            android:layout_weight="1" />
 
-                    </ListView>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
 
-                    <RadioGroup
-                        android:layout_width="122dp"
-                        android:layout_height="match_parent"
-                        android:background="#FFFFFF">
+            <TextView
+                android:id="@+id/Pusty_HP"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Punkty HP:" />
 
-                        <RadioButton
-                            android:id="@+id/b_woj"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Wybierz" />
+            <TextView
+                android:id="@+id/tv_hp"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:text="Wartosc_HP" />
 
-                        <RadioButton
-                            android:id="@+id/b_lucznik"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Wybierz" />
+        </TableRow>
 
-                        <RadioButton
-                            android:id="@+id/b_mag"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Wybierz" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_weight="1">
 
-                    </RadioGroup>
+            <TextView
+                android:id="@+id/Pusty_obrona"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:text="Obrona:" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/tv_obrona"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Wartosc_obrona" />
 
-            </TableLayout>
+        </TableRow>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/iv_sakwa"
-                    android:layout_width="match_parent"
-                    android:layout_height="175dp"
+            <TextView
+                android:id="@+id/Pusty_obr"
+                android:layout_width="167dp"
+                android:layout_height="wrap_content"
+                android:text="Atak:" />
 
-                    android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_atak"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:text="Wartość_ataku" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="29dp">
+        </TableRow>
 
-                    <TextView
-                        android:id="@+id/Pusty_HP"
-                        android:layout_width="202dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Punkty HP:" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_weight="1"
+            android:gravity="bottom">
 
-                    <TextView
-                        android:id="@+id/tv_hp"
-                        android:layout_width="202dp"
-                        android:layout_height="wrap_content"
-                        android:text="Wartosc_HP" />
+            <Button
+                android:id="@+id/b_wroc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:onClick="back"
+                android:text="Wróć" />
 
-                </TableRow>
+            <Button
+                android:id="@+id/b_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:onClick="reset"
+                android:text="Reset" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="7dp"
-                    android:layout_weight="1">
+            <Button
+                android:id="@+id/b_zatwierdz"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#575757"
+                android:onClick="confirm"
+                android:text="Zatwierdź"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-                    <TextView
-                        android:id="@+id/Pusty_obrona"
-                        android:layout_width="211dp"
-                        android:layout_height="wrap_content"
-                        android:text="Obrona:" />
-
-                    <TextView
-                        android:id="@+id/tv_obrona"
-                        android:layout_width="203dp"
-                        android:layout_height="wrap_content"
-                        android:text="Wartosc_obrona" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/Pusty_obr"
-                        android:layout_width="210dp"
-                        android:layout_height="wrap_content"
-                        android:text="Atak:" />
-
-                    <TextView
-                        android:id="@+id/tv_atak"
-                        android:layout_width="201dp"
-                        android:layout_height="wrap_content"
-                        android:text="Wartość_ataku" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="26dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom">
-
-                    <Button
-                        android:id="@+id/b_wroc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="#575757"
-                        android:onClick="back"
-                        android:text="Wróć" />
-
-                    <Button
-                        android:id="@+id/b_reset"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="#575757"
-                        android:onClick="reset"
-                        android:text="Reset" />
-
-                    <Button
-                        android:id="@+id/b_zatwierdz"
-                        android:layout_width="131dp"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#575757"
-                        android:onClick="confirm"
-                        android:text="Zatwierdź"
-                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-                </TableRow>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        </TableRow>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
