@@ -41,7 +41,7 @@
         <ListView
             android:id="@+id/lv_postaci"
             android:layout_width="match_parent"
-            android:layout_height="49dp"
+            android:layout_height="181dp"
             android:minHeight="48dp">
 
         </ListView>
