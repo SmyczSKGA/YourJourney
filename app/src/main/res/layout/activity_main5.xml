@@ -15,29 +15,30 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
+            android:layout_height="wrap_content"
             android:text="Miasto" />
 
         <ImageView
-            android:id="@+id/iv_mapa"
+            android:id="@+id/iv_zbrojmistrz"
             android:layout_width="match_parent"
-            android:layout_height="170dp" />
+            android:layout_height="190dp"
+            app:srcCompat="@drawable/zbrojmistrz" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/iv_alchemik"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:layout_height="190dp"
+            tools:srcCompat="@drawable/alchemik" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/iv_platnerz"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            android:layout_height="190dp"
+            app:srcCompat="@drawable/platnerz" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom">
 
