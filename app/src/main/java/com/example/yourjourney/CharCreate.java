@@ -19,6 +19,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.w3c.dom.Text;
 
 import java.io.File;
@@ -28,6 +32,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class CharCreate extends AppCompatActivity {
 
@@ -42,6 +47,8 @@ public class CharCreate extends AppCompatActivity {
     Button b_zatwierdz;
     ImageView iv_sakwa;
     int Gold;
+    String currentTime;
+    static boolean created = false;
 
 
     @Override
@@ -76,37 +83,39 @@ public class CharCreate extends AppCompatActivity {
         b_zatwierdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentTime = new SimpleDateFormat("HH_mm_ss", Locale.getDefault()).format(new Date());
+                created = true;
                 if (login.getText().toString().equals("")) {
                     NoUser.show();
                 }
                 else if(lv_postaci.isItemChecked(0) == true) {
-                    String filename = login.getText().toString();
-                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    String filename = login.getText().toString() + "_"+ currentTime;
+                    String content = login.getText().toString() +", Wojownik, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
 
 
                     saveTextAsFile(filename, content);
 
-                    Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
                     startActivity(loadSwitch);
                 }
                 else if(lv_postaci.isItemChecked(1) == true){
                     String filename = login.getText().toString();
-                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    String content = login.getText().toString() +", Mag, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
 
 
                     saveTextAsFile(filename, content);
 
-                    Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
                     startActivity(loadSwitch);
                 }
                 else if(lv_postaci.isItemChecked(2) == true){
                     String filename = login.getText().toString();
-                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    String content = login.getText().toString() +", Łucznik, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
 
 
                     saveTextAsFile(filename, content);
 
-                    Intent loadSwitch = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
                     startActivity(loadSwitch);
                 }
                 else {
