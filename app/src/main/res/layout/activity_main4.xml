@@ -16,23 +16,24 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
-            android:text="Lokalizacje" />
+            android:layout_height="42dp"
+            android:text="Rozpocznij swoją przygodę !" />
 
         <ImageView
-            android:id="@+id/iv_zbrojmistrz"
-            android:layout_width="382dp"
-            android:layout_height="241dp"
+            android:id="@+id/iv_opcje"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
             app:srcCompat="@drawable/ic_launcher_background" />
 
-        <ListView
-            android:id="@+id/lv_mapa"
+        <ImageView
+            android:id="@+id/iv_opcje2"
             android:layout_width="match_parent"
-            android:layout_height="278dp" />
+            android:layout_height="280dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:gravity="bottom">
 
@@ -44,17 +45,14 @@
                 android:backgroundTint="#575757"
                 android:minWidth="48dp"
                 android:onClick="back"
-                android:text="Wróć" />
-
-            <Button
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#FFFFFF"
+                android:text="Wyjdź" />
 
 
-                tools:ignore="SpeakableTextPresentCheck" />
-
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="108dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/staty_ksiega" />
 
             <Button
                 android:id="@+id/b_zatwierdz"

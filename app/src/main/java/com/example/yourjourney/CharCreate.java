@@ -41,7 +41,6 @@ public class CharCreate extends AppCompatActivity {
     Button b_zatwierdz;
     int Gold;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +48,7 @@ public class CharCreate extends AppCompatActivity {
 
         lv_postaci = findViewById(R.id.lv_postaci);
         b_zatwierdz = findViewById(R.id.b_zatwierdz);
+
 
         HP = findViewById(R.id.tv_hp);
         ATK = findViewById(R.id.tv_atak);

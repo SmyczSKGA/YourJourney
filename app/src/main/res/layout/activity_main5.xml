@@ -19,7 +19,7 @@
             android:text="Miasto" />
 
         <ImageView
-            android:id="@+id/iv_zbrojmistrz"
+            android:id="@+id/iv_opcje"
             android:layout_width="match_parent"
             android:layout_height="190dp"
             app:srcCompat="@drawable/zbrojmistrz" />
@@ -50,17 +50,14 @@
                 android:backgroundTint="#575757"
                 android:minWidth="48dp"
                 android:onClick="back"
-                android:text="Wróć" />
+                android:text="Wyjdź" />
 
-            <Button
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#FFFFFF"
-                tools:ignore="SpeakableTextPresentCheck">
 
-            </Button>
-
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="108dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/staty_ksiega" />
 
             <Button
                 android:id="@+id/b_zatwierdz"
@@ -68,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#575757"
                 android:onClick="confirm"
-                android:text="Zatwierdź">
+                android:text="Zatwierdź" >
 
             </Button>
 

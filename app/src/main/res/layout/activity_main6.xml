@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_miastowe"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="Miastowe" />
+
+        <ImageView
+            android:id="@+id/iv_pokoj"
+            android:layout_width="match_parent"
+            android:layout_height="276dp"
+            app:srcCompat="?attr/listChoiceBackgroundIndicator" />
+
+        <TextView
+            android:id="@+id/tv_oferta"
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
+            android:text="TextView" />
+
+        <CheckedTextView
+            android:id="@+id/ctv_wybor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckedTextView" />
+
+        <CheckedTextView
+            android:id="@+id/ctv_wybor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckedTextView" />
+
+        <CheckedTextView
+            android:id="@+id/ctv_wybor3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckedTextView" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/Pusty_HP"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Punkty HP:" />
+
+            <TextView
+                android:id="@+id/tv_hp"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:text="Wartosc_HP" />
+
+            <TextView
+                android:id="@+id/tv_gold1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold" />
+
+            <ImageView
+                android:id="@+id/iv_sakwa_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/staty_sakwa" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/Pusty_obr"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Atak:" />
+
+            <TextView
+                android:id="@+id/tv_atak"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:text="Wartość_ataku" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/Pusty_obrona"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:text="Obrona:" />
+
+            <TextView
+                android:id="@+id/tv_obrona"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Wartosc_obrona" >
+
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/b_wroc"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:minWidth="48dp"
+                android:onClick="back"
+                android:text="Wyjdź" />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="108dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/staty_ksiega" />
+
+            <Button
+                android:id="@+id/b_zatwierdz"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#575757"
+                android:onClick="confirm"
+                android:text="Zatwierdź">
+
+            </Button>
+
+        </TableRow>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
