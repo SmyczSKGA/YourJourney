@@ -15,6 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -39,6 +42,7 @@ public class CharCreate extends AppCompatActivity {
     int Gold;
     String currentTime;
     static boolean created = false;
+    static String filename;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +60,7 @@ public class CharCreate extends AppCompatActivity {
         iv_sakwa = findViewById(R.id.iv_sakwa);
 
         Heroes = getResources().getStringArray(R.array.characters);
-
+        // ADAPTER
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_single_choice,
@@ -70,6 +74,7 @@ public class CharCreate extends AppCompatActivity {
         NoUser = Toast.makeText(this, "Wpisz nazwę postaci",Toast.LENGTH_SHORT);
         NoClass = Toast.makeText(this, "Wybierz swoją klasę", Toast.LENGTH_SHORT);
 
+        // ZAPIS WYBORU
         b_zatwierdz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,10 +84,11 @@ public class CharCreate extends AppCompatActivity {
                     NoUser.show();
                 }
                 else if(lv_postaci.isItemChecked(0) == true) {
-                    String filename = login.getText().toString() + "_"+ currentTime;
-                    String content = login.getText().toString() +", Wojownik, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    filename = login.getText().toString() + "_"+ currentTime;
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
+                            +", "+Gold+", R.drawable.woj_ikona, ";
 
-
+                    new Creatures.Creature(login.getText().toString(), 5, 2, 5, 0, "R.drawable.lucznik_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
@@ -90,9 +96,10 @@ public class CharCreate extends AppCompatActivity {
                 }
                 else if(lv_postaci.isItemChecked(1) == true){
                     String filename = login.getText().toString();
-                    String content = login.getText().toString() +", Mag, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
+                            +", "+Gold+", R.drawable.mag_ikona, ";
 
-
+                    new Creatures.Creature(login.getText().toString(), 7,3, 3, 0, "R.drawable.woj_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
@@ -100,9 +107,10 @@ public class CharCreate extends AppCompatActivity {
                 }
                 else if(lv_postaci.isItemChecked(2) == true){
                     String filename = login.getText().toString();
-                    String content = login.getText().toString() +", Łucznik, "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString() +", "+Gold;
+                    String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
+                            +", "+Gold+", R.drawable.lucznik_ikona, ";
 
-
+                    new Creatures.Creature(login.getText().toString(), 4, 7, 1, 0, "R.drawable.mag_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
@@ -115,6 +123,7 @@ public class CharCreate extends AppCompatActivity {
         });
     }
 
+    // TWORZENIE PLIKU DO ZAPISU
     public void saveTextAsFile(String filename, String content) {
         String fileName = filename + ".txt";
 
@@ -141,6 +150,7 @@ public class CharCreate extends AppCompatActivity {
         }
     }
 
+    // POLA ADAPTERA
     AdapterView.OnItemClickListener CharPreviewDesc = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
