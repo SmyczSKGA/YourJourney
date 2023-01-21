@@ -1,12 +1,8 @@
 package com.example.yourjourney;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import static com.example.yourjourney.Creatures.Creature.CreatureList;
 
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -20,18 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Locale;
 
 public class CharCreate extends AppCompatActivity {
@@ -56,7 +46,7 @@ public class CharCreate extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         lv_postaci = findViewById(R.id.lv_postaci);
-        b_zatwierdz = findViewById(R.id.b_zatwierdz);
+        b_zatwierdz = findViewById(R.id.b_atak);
 
 
         HP = findViewById(R.id.tv_hp);

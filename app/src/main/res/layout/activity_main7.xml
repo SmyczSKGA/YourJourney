@@ -6,56 +6,49 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="36dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="20dp"
         >
 
-        <TextView
-            android:id="@+id/tv_miastowe"
-            android:layout_width="match_parent"
-            android:layout_height="29dp"
-            android:text="Miastowe" />
-
         <ImageView
-            android:id="@+id/iv_przechodzien"
+            android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            app:srcCompat="?attr/listChoiceBackgroundIndicator" />
+            android:layout_height="126dp"
+            app:srcCompat="@drawable/walka_napis" />
 
         <TextView
-            android:id="@+id/tv_oferta"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="121dp"
-            android:text="TextView" />
+            android:layout_height="81dp"
+            android:text="Na Twojej drodze stanął szemrany przeciwnik. Nie bądź mu dłużny i pokonaj go w walce. Nie ma innego wyjścia z tej sytuacji, jak podnieść rękawicę." />
 
-        <CheckedTextView
-            android:id="@+id/ctv_wybor1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="217dp"
+            android:orientation="horizontal">
 
-        <CheckedTextView
-            android:id="@+id/ctv_wybor2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="51dp"
+                android:layout_height="217dp"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
 
-        <CheckedTextView
-            android:id="@+id/ctv_wybor3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="37dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/walka_dzik" />
+
+
+        </LinearLayout>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="64dp">
 
             <TextView
                 android:id="@+id/Pusty_HP"
@@ -86,7 +79,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <TextView
@@ -105,7 +98,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:layout_weight="1">
 
 
@@ -119,9 +112,10 @@
                 android:id="@+id/tv_obrona"
                 android:layout_width="203dp"
                 android:layout_height="wrap_content"
-                android:text="Wartosc_obrona" >
+                android:text="Wartosc_obrona">
 
             </TextView>
+
         </TableRow>
 
         <TableRow
@@ -132,33 +126,38 @@
 
             <Button
                 android:id="@+id/b_obrona"
-                android:layout_width="130dp"
+                android:layout_width="156dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                android:backgroundTint="#575757"
+                android:backgroundTint="#0F4875"
                 android:minWidth="48dp"
                 android:onClick="back"
-                android:text="Wyjdź" />
+                android:text="Obrona" />
 
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="108dp"
+            <Button
+                android:id="@+id/b_miekka_faja"
+                android:layout_width="156dp"
                 android:layout_height="48dp"
-                app:srcCompat="@drawable/staty_ksiega" />
+                android:layout_weight="1"
+                android:backgroundTint="#FFB7B7"
+                android:minWidth="48dp"
+                android:onClick="back"
+                android:text="Poddaj się" />
+
 
             <Button
                 android:id="@+id/b_atak"
                 android:layout_width="130dp"
                 android:layout_height="48dp"
-                android:backgroundTint="#575757"
+                android:backgroundTint="#9E1F1F"
                 android:onClick="confirm"
-                android:text="Zatwierdź">
+                android:text="Atak">
 
             </Button>
 
         </TableRow>
 
-    </LinearLayout>
+
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

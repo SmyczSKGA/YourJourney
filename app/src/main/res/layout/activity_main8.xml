@@ -14,48 +14,56 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="20dp"
-        >
+        android:layout_margin="20dp">
+
 
         <TextView
             android:id="@+id/tv_miastowe"
             android:layout_width="match_parent"
             android:layout_height="29dp"
-            android:text="Miastowe" />
+            android:text="Spotykasz przechodnia" />
 
         <ImageView
             android:id="@+id/iv_przechodzien"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            app:srcCompat="?attr/listChoiceBackgroundIndicator" />
+            app:srcCompat="@drawable/przechodzien" />
 
         <TextView
             android:id="@+id/tv_oferta"
             android:layout_width="match_parent"
-            android:layout_height="121dp"
-            android:text="TextView" />
+            android:layout_height="wrap_content"
+            android:text="Na swojej drodze spotkaleś przechodzącą kobietę. Idąc drogą rozmawialiście, bo cóż innego robić na takim pustkowiu. Jest tutejsza, dobrze zna okalające was tereny, zwierzęta które tu mieszkają i doskonale wie co Cię mogło spotkać. Widzi Twoją zbroję, broń oraz blizny po stoczonych walkach jednak patrzy na Ciebie ze spokojem, trochę jak Twoją babcia.Proponuje Ci obiad i nocleg.  " />
+
 
         <CheckedTextView
             android:id="@+id/ctv_wybor1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="58dp"
+            android:background="#A5A8A0"
+            android:text="&quot;Wybieram się w daleką podróż, z dala od tych dzików i choinek. Dziękuję, ale nie skorzystam&quot;"
+            android:textColor="#4E342E" />
 
         <CheckedTextView
             android:id="@+id/ctv_wybor2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="62dp"
+            android:background="#A5A8A0"
+            android:textColor="#4E342E"
+            android:text="&quot;Muszę dostać się do miasta, aby przygotować się do walki w lesie. Mam pewne porachunki. Czy wskażesz mi drogę?&quot;" />
 
         <CheckedTextView
             android:id="@+id/ctv_wybor3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="72dp"
+            android:background="#A5A8A0"
+            android:textColor="#4E342E"
+            android:text="&quot;Nie wiem jak Pani dziękować. Zgubiłem droge, jestem nietutejszy, a w dodatku nie jadłem nic przez 2 dni i 2 noce.&quot;" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="72dp"
+            android:layout_gravity="bottom">
 
             <TextView
                 android:id="@+id/Pusty_HP"
@@ -86,64 +94,14 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/Pusty_obr"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="Atak:" />
-
-            <TextView
-                android:id="@+id/tv_atak"
-                android:layout_width="201dp"
-                android:layout_height="wrap_content"
-                android:text="Wartość_ataku" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-
-            <TextView
-                android:id="@+id/Pusty_obrona"
-                android:layout_width="141dp"
-                android:layout_height="wrap_content"
-                android:text="Obrona:" />
-
-            <TextView
-                android:id="@+id/tv_obrona"
-                android:layout_width="203dp"
-                android:layout_height="wrap_content"
-                android:text="Wartosc_obrona" >
-
-            </TextView>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:gravity="bottom">
-
-            <Button
-                android:id="@+id/b_obrona"
-                android:layout_width="130dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:backgroundTint="#575757"
-                android:minWidth="48dp"
-                android:onClick="back"
-                android:text="Wyjdź" />
 
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="108dp"
+                android:layout_width="222dp"
                 android:layout_height="48dp"
                 app:srcCompat="@drawable/staty_ksiega" />
 
@@ -159,6 +117,8 @@
 
         </TableRow>
 
+
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
