@@ -39,20 +39,17 @@
         <CheckedTextView
             android:id="@+id/ctv_wybor1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="wrap_content" />
 
         <CheckedTextView
             android:id="@+id/ctv_wybor2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="wrap_content" />
 
         <CheckedTextView
             android:id="@+id/ctv_wybor3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckedTextView" />
+            android:layout_height="wrap_content" />
 
         <TableRow
             android:layout_width="match_parent"

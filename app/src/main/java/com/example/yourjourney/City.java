@@ -19,17 +19,17 @@ public class City extends AppCompatActivity {
 
     public void armorer(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), Shop.class);
-        who = 0;
+        who = 2;
         startActivity(menuSwitch);
     }
     public void weaponsmith(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), Shop.class);
-        who = 1;
+        who = 0;
         startActivity(menuSwitch);
     }
     public void alchemist(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), Shop.class);
-        who = 2;
+        who = 1;
         startActivity(menuSwitch);
     }
     public void back(View v) {
