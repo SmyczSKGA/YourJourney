@@ -35,30 +35,68 @@
             android:layout_height="wrap_content"
             android:text="Na swojej drodze spotkaleś przechodzącą kobietę. Idąc drogą rozmawialiście, bo cóż innego robić na takim pustkowiu. Jest tutejsza, dobrze zna okalające was tereny, zwierzęta które tu mieszkają i doskonale wie co Cię mogło spotkać. Widzi Twoją zbroję, broń oraz blizny po stoczonych walkach jednak patrzy na Ciebie ze spokojem, trochę jak Twoją babcia.Proponuje Ci obiad i nocleg.  " />
 
-
-        <CheckedTextView
-            android:id="@+id/ctv_wybor1"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:background="#A5A8A0"
-            android:text="&quot;Wybieram się w daleką podróż, z dala od tych dzików i choinek. Dziękuję, ale nie skorzystam&quot;"
-            android:textColor="#4E342E" />
+            android:layout_height="77dp">
 
-        <CheckedTextView
-            android:id="@+id/ctv_wybor2"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:background="#A5A8A0"
-            android:textColor="#4E342E"
-            android:text="&quot;Muszę dostać się do miasta, aby przygotować się do walki w lesie. Mam pewne porachunki. Czy wskażesz mi drogę?&quot;" />
+            <TextView
+                android:id="@+id/tv_decyzja_1"
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:text="&quot;Wybieram się w daleką podróż, z dala od tych dzików i choinek. Dziękuję, ale nie skorzystam&quot;"
+                android:textColor="#4E342E"
+                android:background="#A5A8A0" />
 
-        <CheckedTextView
-            android:id="@+id/ctv_wybor3"
+            <Button
+                android:id="@+id/b_decyzja1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#601919"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:background="#A5A8A0"
-            android:textColor="#4E342E"
-            android:text="&quot;Nie wiem jak Pani dziękować. Zgubiłem droge, jestem nietutejszy, a w dodatku nie jadłem nic przez 2 dni i 2 noce.&quot;" />
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/tv_decyzja2"
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:background="#A5A8A0"
+                android:text="&quot;Muszę dostać się do miasta, aby przygotować się do walki w lesie. Mam pewne porachunki. Czy wskażesz mi drogę?&quot;"
+                android:textColor="#4E342E" />
+
+            <Button
+                android:id="@+id/b_decyzja2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#601919"
+                android:text="Button" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <TextView
+                android:id="@+id/tv_decyzja3"
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:background="#A5A8A0"
+                android:text="&quot;Nie wiem jak Pani dziękować. Zgubiłem droge, jestem nietutejszy, a w dodatku nie jadłem nic przez 2 dni i 2 noce.&quot;"
+                android:textColor="#4E342E" />
+
+            <Button
+                android:id="@+id/b_decyzja3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#601919"
+                android:text="Button" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
