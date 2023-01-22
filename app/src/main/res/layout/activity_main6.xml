@@ -27,7 +27,7 @@
         <ImageView
             android:id="@+id/iv_przechodzien"
             android:layout_width="match_parent"
-            android:layout_height="194dp"
+            android:layout_height="210dp"
             app:srcCompat="?attr/listChoiceBackgroundIndicator" />
 
         <TextView
@@ -36,62 +36,22 @@
             android:layout_height="121dp"
             android:text="TextView" />
 
-        <TableRow
+        <CheckedTextView
+            android:id="@+id/ctv_wybor1"
             android:layout_width="match_parent"
-            android:layout_height="47dp" >
+            android:checked="true"
+            android:clickable="true"
+            android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tv_wybor_1"
-                android:layout_width="276dp"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Button
-                android:id="@+id/b_wybor_1"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:backgroundTint="#601919"
-                android:text="Button" />
-
-        </TableRow>
-
-        <TableRow
+        <CheckedTextView
+            android:id="@+id/ctv_wybor2"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tv_wybor2"
-                android:layout_width="276dp"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Button
-                android:id="@+id/b_wybor2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:backgroundTint="#601919"
-                android:text="Button" />
-
-        </TableRow>
-
-        <TableRow
+        <CheckedTextView
+            android:id="@+id/ctv_wybor3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_wybor3"
-                android:layout_width="276dp"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Button
-                android:id="@+id/b_wybor3"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:backgroundTint="#601919"
-                android:text="Button" />
-
-        </TableRow>
+            android:layout_height="wrap_content" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -183,7 +143,7 @@
             <Button
                 android:id="@+id/b_reset"
                 android:layout_width="130dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#575757"
                 android:text="Reset">
