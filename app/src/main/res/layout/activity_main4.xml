@@ -23,6 +23,7 @@
             android:id="@+id/iv_miasto"
             android:layout_width="match_parent"
             android:layout_height="280dp"
+            android:onClick="city"
             app:srcCompat="@drawable/land" />
 
         <ImageView

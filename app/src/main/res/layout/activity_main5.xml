@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".City">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,18 +23,21 @@
             android:id="@+id/iv_zbroj"
             android:layout_width="match_parent"
             android:layout_height="190dp"
+            android:onClick="weaponsmith"
             app:srcCompat="@drawable/zbrojmistrz" />
 
         <ImageView
             android:id="@+id/iv_alchemik"
             android:layout_width="match_parent"
             android:layout_height="190dp"
+            android:onClick="alchemist"
             tools:srcCompat="@drawable/alchemik" />
 
         <ImageView
             android:id="@+id/iv_platnerz"
             android:layout_width="match_parent"
             android:layout_height="190dp"
+            android:onClick="armorer"
             app:srcCompat="@drawable/platnerz" />
 
         <TableRow
