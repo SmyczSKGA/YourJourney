@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (Creatures.Creature.CreatureList.isEmpty()) {
-            new Creatures.Creature("Wojownik", 7,3, 3, 0, "");
-            new Creatures.Creature("Mag", 4, 7, 1, 0, "");
-            new Creatures.Creature("Łucznik", 5, 2, 5, 0, "");
+            new Creatures.Creature("Wojownik", 7,3, 3, 0, "R.drawable.woj_ikona");
+            new Creatures.Creature("Mag", 4, 7, 1, 0, "R.drawable.mag_ikona");
+            new Creatures.Creature("Łucznik", 5, 2, 5, 0, "R.drawable.lucznik_ikona");
             new Creatures.Creature("Dzik", 4, 3, 1, 0, "");
             new Creatures.Creature("Goblin", 5, 2, 4, 0, "");
             new Creatures.Creature("Ork", 6, 5, 3, 0, "");

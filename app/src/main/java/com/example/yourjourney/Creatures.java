@@ -27,7 +27,7 @@ public class Creatures extends AppCompatActivity {
         public static ArrayList<Creature> CreatureList = new ArrayList<Creature>();
         @Override
         public String toString(){
-            return "Name="+name+hp+attack+defence+gold;
+            return name+", "+hp+", "+attack+", "+defence+", "+gold+", "+img;
             }
     }
 
