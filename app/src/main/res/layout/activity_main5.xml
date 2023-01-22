@@ -24,13 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:onClick="weaponsmith"
-            app:srcCompat="@drawable/zbrojmistrz" />
+            app:srcCompat="@drawable/zbrojmistrz"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/iv_alchemik"
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:onClick="alchemist"
+            tools:ignore="SpeakableTextPresentCheck"
             tools:srcCompat="@drawable/alchemik" />
 
         <ImageView
@@ -38,7 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:onClick="armorer"
-            app:srcCompat="@drawable/platnerz" />
+            app:srcCompat="@drawable/platnerz"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TableRow
             android:layout_width="match_parent"
