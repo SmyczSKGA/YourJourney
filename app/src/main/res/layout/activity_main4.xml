@@ -52,6 +52,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="108dp"
                 android:layout_height="48dp"
+                android:onClick="statistics"
                 app:srcCompat="@drawable/staty_ksiega" />
 
             <Button

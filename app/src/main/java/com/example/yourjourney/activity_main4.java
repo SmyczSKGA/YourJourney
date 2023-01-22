@@ -27,14 +27,13 @@ public class activity_main4 extends AppCompatActivity {
 
     boolean firsttime = true;
     final String filename = CharCreate.filename;
-    String H_name;
-    int H_hp;
-    int H_hpmax;
-    int H_atk;
-    int H_def;
-    int H_gold;
+    public static String H_name;
+    public static int H_hp; public int H_hp_temp;
+    public static int H_hpmax; public int H_hpmax_temp;
+    public static int H_atk; public int H_atk_temp;
+    public static int H_def; public int H_def_temp;
+    public static int H_gold; public int H_gold_temp;
     String H_img;
-    String str = "";
     String splitter = CreatureList.get(CreatureList.size() - 1).toString();
 
     @Override
@@ -45,11 +44,11 @@ public class activity_main4 extends AppCompatActivity {
         if(firsttime==true) {
             String[] separate = splitter.split(", ");
             H_name = separate[0];
-            H_hp = Integer.valueOf(separate[1]);
-            H_hpmax = Integer.valueOf(separate[1]);
-            H_atk = Integer.valueOf(separate[2]);
-            H_def = Integer.valueOf(separate[3]);
-            H_gold = Integer.valueOf(separate[4]);
+            H_hp = Integer.valueOf(separate[1]); H_hp_temp= H_hp;
+            H_hpmax = Integer.valueOf(separate[1]); H_hpmax_temp = H_hpmax;
+            H_atk = Integer.valueOf(separate[2]); H_atk_temp = H_atk;
+            H_def = Integer.valueOf(separate[3]); H_def_temp = H_def;
+            H_gold = Integer.valueOf(separate[4]); H_gold_temp = H_gold;
             H_img = separate[5];
             //H_name = CreatureList.get(CreatureList.size() - 1).toString();
             Log.i("Test","NAME: "+H_name);
@@ -62,36 +61,6 @@ public class activity_main4 extends AppCompatActivity {
             firsttime=false;
         }
         else {}
-    }
-
-    // CZYTAJ PLIK
-    public void readFile(View v) {
-        if(isExternalStorageReadable()){
-            // IMPORT DO SB
-            StringBuilder sb  =new StringBuilder();
-            try{
-                File textFile = new File(Environment.getExternalStorageDirectory(), filename);
-                FileInputStream fis = new FileInputStream(textFile);
-
-                if(fis!=null) {
-                    InputStreamReader isr = new InputStreamReader(fis);
-                    BufferedReader buff = new BufferedReader(isr);
-
-                    String line = null;
-                    while((line = buff.readLine()) != null){
-                        sb.append(line +"\n");
-                    }
-                    fis.close();
-                    Log.i("info", "ZAIMPORTOWANO" +sb);
-                }
-            }
-            catch(IOException e) {
-                e.printStackTrace();
-            }
-        }
-        else{
-            Toast.makeText(this,"Cannot Read from External Storage", Toast.LENGTH_SHORT).show();
-        }
     }
 
     private boolean isExternalStorageReadable() {
@@ -109,6 +78,11 @@ public class activity_main4 extends AppCompatActivity {
     public void back(View v) {
         firsttime=true;
         Intent menuSwitch = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(menuSwitch);
+    }
+
+    public void statistics(View v) {
+        Intent menuSwitch = new Intent(getApplicationContext(), Statistics.class);
         startActivity(menuSwitch);
     }
 }
