@@ -39,6 +39,8 @@
         <CheckedTextView
             android:id="@+id/ctv_wybor1"
             android:layout_width="match_parent"
+            android:checked="true"
+            android:clickable="true"
             android:layout_height="wrap_content" />
 
         <CheckedTextView
