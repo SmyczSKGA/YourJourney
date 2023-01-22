@@ -11,18 +11,64 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ladowanie" />
-
         <TextView
             android:id="@+id/tv_loading"
             android:layout_width="match_parent"
-            android:layout_height="49dp"
+            android:layout_height="wrap_content"
             android:text="Ładowanie ..."
             android:textSize="34sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="389dp"
+            app:srcCompat="@drawable/ladowanie" />
+
+        <ListView
+            android:id="@+id/lv_pliki"
+            android:layout_width="match_parent"
+            android:layout_height="171dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/b_obrona"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:minWidth="48dp"
+                android:onClick="back"
+                android:text="Wróć" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#575757"
+                android:text="Delete"
+
+
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <Button
+                android:id="@+id/b_atak"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#575757"
+                android:onClick="confirm"
+                android:text="Wczytaj">
+
+            </Button>
+
+        </TableRow>
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
