@@ -133,18 +133,17 @@ public class Shop extends AppCompatActivity {
         }
         else {
             oferta.setText("Zaglądasz do Płatnerza. Możesz u niego ulepszyć swoją obronę, by lepiej bronić się przed atakami przeciwnika.");
-
             choice1.setText("Ulepsz swoją obronę.");
             choice2.setText("");
             button1.setText("Kup");
             button2.setText("");
+            shop.setImageResource(R.drawable.plat);
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if(H_goldtemp>0){
                         H_goldtemp--;
                         H_deftemp++;
-                        shop.setImageResource(R.drawable.plat);
 
                         button1.setOnClickListener(new View.OnClickListener() {
                             public void onClick(View v) {
@@ -167,8 +166,6 @@ public class Shop extends AppCompatActivity {
             });
         }
     }
-
-
     public void back(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), City.class);
         startActivity(menuSwitch);

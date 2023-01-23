@@ -25,15 +25,15 @@
 
             <ImageView
                 android:id="@+id/iv_zbroj"
-                android:layout_width="184dp"
-                android:layout_height="190dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/zbrojmistrz"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageView
                 android:id="@+id/iv_alchemik"
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
                 android:src="@drawable/alchemik"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -41,12 +41,12 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="189dp">
+            android:layout_height="149dp">
 
             <ImageView
                 android:id="@+id/iv_platnerz"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/platnerz"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -55,7 +55,7 @@
         <ListView
             android:id="@+id/lv_miastowe"
             android:layout_width="match_parent"
-            android:layout_height="265dp" />
+            android:layout_height="250dp" />
 
         <TableRow
             android:layout_width="match_parent"
