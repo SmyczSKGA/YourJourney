@@ -94,7 +94,7 @@ public class Forest extends AppCompatActivity {
 
         b_decision1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent menuSwitch = new Intent(getApplicationContext(), gameover.class);
+                Intent menuSwitch = new Intent(getApplicationContext(), game_over.class);
                 startActivity(menuSwitch);
             }
         });

@@ -10,17 +10,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Game Over" />
-
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
             android:layout_height="627dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:src="@drawable/game_over_iv" />
 
         <Button
             android:id="@+id/button"

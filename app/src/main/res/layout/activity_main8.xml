@@ -28,7 +28,7 @@
             android:id="@+id/iv_miastowy"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            app:srcCompat="@drawable/przechodzien" />
+            android:src="@drawable/stachu"/>
 
         <TextView
             android:id="@+id/tv_oferta"
@@ -42,11 +42,11 @@
 
             <TextView
                 android:id="@+id/tv_decyzja_1"
-                android:layout_width="276dp"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
+                android:background="#A5A8A0"
                 android:text="&quot;Wybieram się w daleką podróż, z dala od tych dzików i choinek. Dziękuję, ale nie skorzystam&quot;"
-                android:textColor="#4E342E"
-                android:background="#A5A8A0" />
+                android:textColor="#4E342E" />
 
             <Button
                 android:id="@+id/b_decyzja1"
@@ -63,7 +63,7 @@
 
             <TextView
                 android:id="@+id/tv_decyzja2"
-                android:layout_width="276dp"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:background="#A5A8A0"
                 android:text="&quot;Muszę dostać się do miasta, aby przygotować się do walki w lesie. Mam pewne porachunki. Czy wskażesz mi drogę?&quot;"
@@ -84,7 +84,7 @@
 
             <TextView
                 android:id="@+id/tv_decyzja3"
-                android:layout_width="276dp"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:background="#A5A8A0"
                 android:text="&quot;Nie wiem jak Pani dziękować. Zgubiłem droge, jestem nietutejszy, a w dodatku nie jadłem nic przez 2 dni i 2 noce.&quot;"
