@@ -4,6 +4,7 @@ import static com.example.yourjourney.Creatures.Creature.CreatureList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -59,10 +60,10 @@ public class Fight extends AppCompatActivity {
 
     public void attack(){
         roll_H = rand.nextInt((100 - 0) + 1) + 0;
-        chance_H = 20 + (5*(activity_main4.H_atk - M_def));
+        chance_H = 20 + (10*(activity_main4.H_atk - M_def));
 
         roll_M = rand.nextInt((100 - 0) + 1) + 0;
-        chance_M = 20 + (5*(M_atk - activity_main4.H_def));
+        chance_M = 20 + (10*(M_atk - activity_main4.H_def));
 
         if(chance_H>roll_H) {
             result.setText("Trafienie! Zadajesz przeciwnikowi 1 obrażen!");
@@ -76,20 +77,28 @@ public class Fight extends AppCompatActivity {
             activity_main4.H_hp--;
         }
         else if(chance_M<=roll_M) {
-            result.setText("Nie trafiasz!");
+            result.setText("Przeciwnik nie trafia!");
         }
     }
 
     public void defence(){
         roll_M = rand.nextInt((100 - 0) + 1) + 0;
-        chance_M = 20 + (5*(M_atk - activity_main4.H_def));
+        chance_M = 20 + (5*(M_atk - (activity_main4.H_def+activity_main4.H_def)));
 
         if(chance_M>roll_M) {
-            result.setText("Trafienie! Zadajesz przeciwnikowi 1 obrażen!");
-            M_hp--;
+            result.setText("Przeciwnik trafia cię! Dostajesz 1 obrażen!");
+            activity_main4.H_hp--;
         }
         else if(chance_M<=roll_M) {
-            result.setText("Nie trafiasz!");
+            if(chance_M+chance_M<=roll_M) {
+
+            }
+            result.setText("Przeciwnik nie trafia!");
         }
+    }
+
+    public void surrender(){
+        Intent menuSwitch = new Intent(getApplicationContext(), gameover.class);
+        startActivity(menuSwitch);
     }
 }
