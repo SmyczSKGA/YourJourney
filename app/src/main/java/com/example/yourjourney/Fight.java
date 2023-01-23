@@ -39,8 +39,8 @@ public class Fight extends AppCompatActivity {
         String[] separate = splitter.split(", ");
 
         tv_hp = findViewById(R.id.tv_hp);
-        tv_atk = findViewById(R.id.tv_atak);
-        tv_def = findViewById(R.id.tv_obrona);
+        tv_atk = findViewById(R.id.tv_atak_w);
+        tv_def = findViewById(R.id.tv_obrona_w);
         tv_gold = findViewById(R.id.tv_gold1);
 
         tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));

@@ -101,7 +101,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom">
 
             <TextView
@@ -129,6 +129,50 @@
                 android:layout_height="60dp"
                 app:srcCompat="@drawable/staty_sakwa" />
         </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/Pusty_obr"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Atak:" />
+
+            <TextView
+                android:id="@+id/tv_atak_w"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:text="Wartość_ataku" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/Pusty_obrona"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:text="Obrona:" />
+
+            <TextView
+                android:id="@+id/tv_obrona_w"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Wartosc_obrona">
+
+            </TextView>
+
+        </TableRow>
+
+
 
     </LinearLayout>
 

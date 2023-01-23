@@ -15,9 +15,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -54,8 +51,8 @@ public class CharCreate extends AppCompatActivity {
 
 
         HP = findViewById(R.id.tv_hp);
-        ATK = findViewById(R.id.tv_atak);
-        DEF = findViewById(R.id.tv_obrona);
+        ATK = findViewById(R.id.tv_atak_w);
+        DEF = findViewById(R.id.tv_obrona_w);
         Gold = 0;
         iv_sakwa = findViewById(R.id.iv_sakwa);
 

@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,8 +39,8 @@ public class Shop extends AppCompatActivity {
         H_goldtemp = activity_main4.H_gold;
 
         tv_hp = findViewById(R.id.tv_hp);
-        tv_atk = findViewById(R.id.tv_atak);
-        tv_def = findViewById(R.id.tv_obrona);
+        tv_atk = findViewById(R.id.tv_atak_w);
+        tv_def = findViewById(R.id.tv_obrona_w);
         tv_gold = findViewById(R.id.tv_gold1);
         shop = findViewById(R.id.iv_miastowy);
 

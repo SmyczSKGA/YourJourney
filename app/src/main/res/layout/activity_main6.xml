@@ -121,7 +121,7 @@
                 android:text="Atak:" />
 
             <TextView
-                android:id="@+id/tv_atak"
+                android:id="@+id/tv_atak_w"
                 android:layout_width="201dp"
                 android:layout_height="wrap_content"
                 android:text="Wartość_ataku" />
@@ -141,7 +141,7 @@
                 android:text="Obrona:" />
 
             <TextView
-                android:id="@+id/tv_obrona"
+                android:id="@+id/tv_obrona_w"
                 android:layout_width="203dp"
                 android:layout_height="wrap_content"
                 android:text="Wartosc_obrona">

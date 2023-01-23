@@ -22,8 +22,8 @@ public class Statistics extends AppCompatActivity {
 
         tv_name = findViewById(R.id.tv_login_s);
         tv_hp = findViewById(R.id.tv_hp);
-        tv_atk = findViewById(R.id.tv_atak);
-        tv_def = findViewById(R.id.tv_obrona);
+        tv_atk = findViewById(R.id.tv_atak_w);
+        tv_def = findViewById(R.id.tv_obrona_w);
         tv_gold = findViewById(R.id.tv_gold);
 
         tv_name.setText(activity_main4.H_name);
@@ -44,8 +44,8 @@ public class Statistics extends AppCompatActivity {
 
         tv_name = findViewById(R.id.tv_login_s);
         tv_hp = findViewById(R.id.tv_hp);
-        tv_atk = findViewById(R.id.tv_atak);
-        tv_def = findViewById(R.id.tv_obrona);
+        tv_atk = findViewById(R.id.tv_atak_w);
+        tv_def = findViewById(R.id.tv_obrona_w);
         tv_gold = findViewById(R.id.tv_gold);
 
         tv_name.setText(activity_main4.H_name);
