@@ -4,8 +4,10 @@ import static com.example.yourjourney.Creatures.Creature.CreatureList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -25,6 +27,8 @@ public class Fight extends AppCompatActivity {
     TextView tv_gold;
     TextView result;
     Random rand = new Random();
+    ImageView img_hero;
+    ImageView img_monster;
     int chance_H;
     int roll_H;
     int chance_M;
@@ -42,6 +46,8 @@ public class Fight extends AppCompatActivity {
         tv_atk = findViewById(R.id.tv_atak_w);
         tv_def = findViewById(R.id.tv_obrona_w);
         tv_gold = findViewById(R.id.tv_gold1);
+        img_hero = findViewById(R.id.imageView3);
+        img_monster = findViewById(R.id.imageView4);
 
         tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));
         tv_atk.setText(String.valueOf(activity_main4.H_atk));
@@ -55,6 +61,10 @@ public class Fight extends AppCompatActivity {
         M_def = Integer.valueOf(separate[3]);
         M_gold = Integer.valueOf(separate[4]);
         M_img = separate[5];
+
+
+        img_hero.setImageResource(Integer.parseInt(activity_main4.H_img));
+        img_monster.setImageResource(Integer.parseInt(M_img));
     }
 
 

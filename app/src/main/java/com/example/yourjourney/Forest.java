@@ -24,6 +24,8 @@ public class Forest extends AppCompatActivity {
     TextView tv_decision3;
     TextView tv_hp;
     TextView tv_gold;
+    TextView tv_atk;
+    TextView tv_def;
     Button b_decision1;
     Button b_decision2;
     Button b_decision3;
@@ -40,6 +42,7 @@ public class Forest extends AppCompatActivity {
         brief = findViewById(R.id.tv_oferta);
         event = findViewById(R.id.iv_miastowy);
 
+        //tv_atk = findViewById(R.id.tv_atak);
         tv_hp = findViewById(R.id.tv_hp);
         tv_gold = findViewById(R.id.tv_gold1);
         tv_decision1 = findViewById(R.id.tv_decyzja_1);
@@ -127,6 +130,7 @@ public class Forest extends AppCompatActivity {
         b_decision1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 place=4;
+                i = rand.nextInt((2 - 5) + 1) + 0;
                 Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
                 startActivity(menuSwitch);
             }
@@ -134,6 +138,7 @@ public class Forest extends AppCompatActivity {
         b_decision2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 place=4;
+                i = rand.nextInt((2 - 5) + 1) + 0;
                 Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
                 startActivity(menuSwitch);
             }
@@ -141,6 +146,7 @@ public class Forest extends AppCompatActivity {
         b_decision3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 place=4;
+                i = rand.nextInt((2 - 5) + 1) + 0;
                 Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
                 startActivity(menuSwitch);
             }

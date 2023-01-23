@@ -32,7 +32,7 @@ public class activity_main4 extends AppCompatActivity {
     public static int H_atk; public int H_atk_temp;
     public static int H_def; public int H_def_temp;
     public static int H_gold; public int H_gold_temp;
-    String H_img;
+    public static String H_img;
     String splitter = CreatureList.get(CreatureList.size() - 1).toString();
 
     @Override
