@@ -1,5 +1,7 @@
 package com.example.yourjourney;
 
+import static com.example.yourjourney.Creatures.Creature.CreatureList;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -26,7 +28,7 @@ public class Forest extends AppCompatActivity {
     Button b_decision2;
     Button b_decision3;
     public int place;
-    public int enemy;
+    public static int i;
     Random rand = new Random();
 
     @Override
@@ -97,7 +99,7 @@ public class Forest extends AppCompatActivity {
 
         b_decision1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent menuSwitch = new Intent(getApplicationContext(), game_over.class);
+                Intent menuSwitch = new Intent(getApplicationContext(), gameover.class);
                 startActivity(menuSwitch);
             }
         });

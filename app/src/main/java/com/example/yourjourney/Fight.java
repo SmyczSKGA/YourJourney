@@ -1,9 +1,13 @@
 package com.example.yourjourney;
 
+import static com.example.yourjourney.Creatures.Creature.CreatureList;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class Fight extends AppCompatActivity {
 
@@ -15,24 +19,77 @@ public class Fight extends AppCompatActivity {
     int M_gold;
     String M_img;
     TextView tv_hp;
-    TextView tv_atak;
-    TextView tv_obrona;
+    TextView tv_atk;
+    TextView tv_def;
     TextView tv_gold;
+    TextView result;
+    Random rand = new Random();
+    int chance_H;
+    int roll_H;
+    int chance_M;
+    int roll_M;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
 
+        String splitter = CreatureList.get(Forest.i).toString();
+        String[] separate = splitter.split(", ");
+
         tv_hp = findViewById(R.id.tv_hp);
-        tv_atak = findViewById(R.id.tv_atak);
-        tv_obrona = findViewById(R.id.tv_obrona);
+        tv_atk = findViewById(R.id.tv_atak);
+        tv_def = findViewById(R.id.tv_obrona);
         tv_gold = findViewById(R.id.tv_gold1);
-        tv_hp = ;
+
+        tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));
+        tv_atk.setText(String.valueOf(activity_main4.H_atk));
+        tv_def.setText(String.valueOf(activity_main4.H_def));
+        tv_gold.setText(String.valueOf(activity_main4.H_gold));
+
+        M_name = separate[0];
+        M_hp = Integer.valueOf(separate[1]);
+        M_hpmax = Integer.valueOf(separate[1]);
+        M_atk = Integer.valueOf(separate[2]);
+        M_def = Integer.valueOf(separate[3]);
+        M_gold = Integer.valueOf(separate[4]);
+        M_img = separate[5];
     }
 
 
-    public void turn(){
+    public void attack(){
+        roll_H = rand.nextInt((100 - 0) + 1) + 0;
+        chance_H = 20 + (5*(activity_main4.H_atk - M_def));
 
+        roll_M = rand.nextInt((100 - 0) + 1) + 0;
+        chance_M = 20 + (5*(M_atk - activity_main4.H_def));
+
+        if(chance_H>roll_H) {
+            result.setText("Trafienie! Zadajesz przeciwnikowi 1 obrażen!");
+            M_hp--;
+        }
+        else if(chance_H<=roll_H) {
+            result.setText("Nie trafiasz!");
+        }
+        if(chance_M>roll_M) {
+            result.setText("Przeciwnik trafia cię! Dostajesz 1 obrażen!");
+            activity_main4.H_hp--;
+        }
+        else if(chance_M<=roll_M) {
+            result.setText("Nie trafiasz!");
+        }
+    }
+
+    public void defence(){
+        roll_M = rand.nextInt((100 - 0) + 1) + 0;
+        chance_M = 20 + (5*(M_atk - activity_main4.H_def));
+
+        if(chance_M>roll_M) {
+            result.setText("Trafienie! Zadajesz przeciwnikowi 1 obrażen!");
+            M_hp--;
+        }
+        else if(chance_M<=roll_M) {
+            result.setText("Nie trafiasz!");
+        }
     }
 }
