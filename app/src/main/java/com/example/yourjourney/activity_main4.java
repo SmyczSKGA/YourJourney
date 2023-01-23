@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 
 public class activity_main4 extends AppCompatActivity {
 
-    boolean firsttime = true;
     final String filename = CharCreate.filename;
     public static String H_name;
     public static int H_hp; public int H_hp_temp;
@@ -41,7 +40,7 @@ public class activity_main4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
-        if(firsttime==true) {
+        if(MainActivity.firsttime==true) {
             String[] separate = splitter.split(", ");
             H_name = separate[0];
             H_hp = Integer.valueOf(separate[1]); H_hp_temp= H_hp;
@@ -58,7 +57,7 @@ public class activity_main4 extends AppCompatActivity {
             Log.i("Test","DEF: "+H_def);
             Log.i("Test","GOLD: "+H_gold);
             Log.i("Test","IMG: "+H_img);
-            firsttime=false;
+            MainActivity.firsttime=false;
         }
         else {}
     }
@@ -76,7 +75,7 @@ public class activity_main4 extends AppCompatActivity {
 
 
     public void back(View v) {
-        firsttime=true;
+        MainActivity.firsttime=true;
         Intent menuSwitch = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(menuSwitch);
     }

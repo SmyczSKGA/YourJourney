@@ -27,7 +27,6 @@
                 android:id="@+id/iv_zbroj"
                 android:layout_width="184dp"
                 android:layout_height="190dp"
-                android:onClick="weaponsmith"
                 app:srcCompat="@drawable/zbrojmistrz"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -35,7 +34,6 @@
                 android:id="@+id/iv_alchemik"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
-                android:onClick="alchemist"
                 android:src="@drawable/alchemik"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -49,7 +47,6 @@
                 android:id="@+id/iv_platnerz"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:onClick="armorer"
                 app:srcCompat="@drawable/platnerz"
                 tools:ignore="SpeakableTextPresentCheck" />
 

@@ -23,6 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static boolean firsttime = true;
     public TextView title;
     public Button start_btn;
     public Button load_btn;

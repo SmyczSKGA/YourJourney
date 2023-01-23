@@ -28,7 +28,7 @@
             android:id="@+id/iv_miastowy"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            app:srcCompat="?attr/listChoiceBackgroundIndicator" />
+            android:src="?attr/listChoiceBackgroundIndicator" />
 
         <TextView
             android:id="@+id/tv_komunikat"
@@ -66,7 +66,6 @@
                 android:layout_width="269dp"
                 android:layout_height="wrap_content"
                 android:background="#A5A8A0"
-                android:text="&quot;Towar2&quot;"
                 android:textColor="#4E342E" />
 
             <Button

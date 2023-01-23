@@ -37,4 +37,21 @@ public class Statistics extends AppCompatActivity {
         Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
         startActivity(menuSwitch);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        tv_name = findViewById(R.id.tv_login_s);
+        tv_hp = findViewById(R.id.tv_hp);
+        tv_atk = findViewById(R.id.tv_atak);
+        tv_def = findViewById(R.id.tv_obrona);
+        tv_gold = findViewById(R.id.tv_gold);
+
+        tv_name.setText(activity_main4.H_name);
+        tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));
+        tv_atk.setText(String.valueOf(activity_main4.H_atk));
+        tv_def.setText(String.valueOf(activity_main4.H_def));
+        tv_gold.setText(String.valueOf(activity_main4.H_gold));
+    }
 }
