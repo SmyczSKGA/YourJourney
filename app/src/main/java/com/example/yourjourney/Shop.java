@@ -155,8 +155,6 @@ public class Shop extends AppCompatActivity {
     }
 
 
-
-
     public void back(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), City.class);
         startActivity(menuSwitch);
