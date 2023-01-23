@@ -88,4 +88,8 @@ public class activity_main4 extends AppCompatActivity {
         Intent menuSwitch = new Intent(getApplicationContext(), City.class);
         startActivity(menuSwitch);
     }
+    public void forest(View v) {
+        Intent menuSwitch = new Intent(getApplicationContext(), Forest.class);
+        startActivity(menuSwitch);
+    }
 }

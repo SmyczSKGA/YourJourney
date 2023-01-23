@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
             new Creatures.Creature("Wojownik", 7,3, 3, 0, "R.drawable.woj_ikona");
             new Creatures.Creature("Mag", 4, 7, 1, 0, "R.drawable.mag_ikona");
             new Creatures.Creature("Łucznik", 5, 2, 5, 0, "R.drawable.lucznik_ikona");
-            new Creatures.Creature("Dzik", 4, 3, 1, 0, "");
-            new Creatures.Creature("Goblin", 5, 2, 4, 0, "");
-            new Creatures.Creature("Ork", 6, 5, 3, 0, "");
+            new Creatures.Creature("Dzik", 4, 3, 1, 1, "R.drawable.walka_dzik");
+            new Creatures.Creature("choinka", 5, 2, 4, 2, "R.drawable.walka_choinka");
+            new Creatures.Creature("Stachu", 6, 5, 3, 4, "R.drawable.stachu");
         }
 
         Log.i("Data",CreatureList.get(index).toString());

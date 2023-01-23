@@ -47,6 +47,9 @@ public class Forest extends AppCompatActivity {
         b_decision2 = findViewById(R.id.b_decyzja2);
         b_decision3 = findViewById(R.id.b_decyzja3);
 
+        tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));
+        tv_gold.setText(String.valueOf(activity_main4.H_gold));
+
         if(place==0) {event1();}
         else if(place==1) {event2();}
         else if(place==2) {event3();}
@@ -118,6 +121,28 @@ public class Forest extends AppCompatActivity {
         tv_decision1.setText("Crap baskets");
         tv_decision2.setText("O nie! Jestesmy zgubieni!");
         tv_decision3.setText("I tak to wygram, bo to wersja demonstracyjna");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=4;
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=4;
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=4;
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
     }
 
     public void  event4() {
@@ -141,13 +166,13 @@ public class Forest extends AppCompatActivity {
     }
 
     public void  event6() {
-        place=4;
-        title.setText("Zostań na chwilę i posłuchaj");
+        place=5;
+        title.setText("Zbyt groźnie");
         event.setImageResource(R.drawable.przechodzien);
-        brief.setText("Po pokonaniu stwora, przechodzień oferuje ci zapłatę w wysokości 5 sztuk złota za ocalenie mu życia.");
-        tv_decision1.setText("Przyjmę twój podarek. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
-        tv_decision2.setText("Nie musisz mi dziękować. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
-        tv_decision3.setText("Podwójne racje? Świetnie!");
+        brief.setText("Ten las jest zbyt groźny byś mógł go eksplorować.");
+        tv_decision1.setText("Uciekajcie!");
+        tv_decision2.setText("Zbyt Straszne!");
+        tv_decision3.setText("Szok!");
     }
 
 
