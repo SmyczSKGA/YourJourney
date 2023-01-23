@@ -21,19 +21,19 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="149dp" >
+            android:layout_height="209dp">
 
             <ImageView
                 android:id="@+id/iv_zbroj"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="225dp"
                 app:srcCompat="@drawable/zbrojmistrz"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageView
                 android:id="@+id/iv_alchemik"
                 android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_height="225dp"
                 android:src="@drawable/alchemik"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -41,12 +41,12 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="149dp">
+            android:layout_height="210dp">
 
             <ImageView
                 android:id="@+id/iv_platnerz"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="198dp"
                 app:srcCompat="@drawable/platnerz"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -55,42 +55,19 @@
         <ListView
             android:id="@+id/lv_miastowe"
             android:layout_width="match_parent"
-            android:layout_height="250dp" />
+            android:layout_height="157dp">
 
-        <TableRow
+        </ListView>
+
+        <Button
+            android:id="@+id/b_obrona"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:gravity="bottom">
-
-            <Button
-                android:id="@+id/b_obrona"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#575757"
-                android:minWidth="48dp"
-                android:onClick="back"
-                android:text="Wyjdź" />
-
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="108dp"
-                android:layout_height="48dp"
-                app:srcCompat="@drawable/staty_ksiega" />
-
-            <Button
-                android:id="@+id/b_atak"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#575757"
-                android:onClick="confirm"
-                android:text="Zatwierdź">
-
-            </Button>
-
-        </TableRow>
+            android:backgroundTint="#575757"
+            android:minWidth="48dp"
+            android:onClick="back"
+            android:text="Wyjdź" />
 
 
     </LinearLayout>
