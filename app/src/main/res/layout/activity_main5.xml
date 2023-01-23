@@ -33,7 +33,7 @@
             android:layout_height="190dp"
             android:onClick="alchemist"
             tools:ignore="SpeakableTextPresentCheck"
-            tools:srcCompat="@drawable/alchemik" />
+            android:src="@drawable/alchemik"/>
 
         <ImageView
             android:id="@+id/iv_platnerz"
