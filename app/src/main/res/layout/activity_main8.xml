@@ -128,38 +128,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:srcCompat="@drawable/staty_sakwa" />
-
         </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:gravity="bottom">
-
-            <Button
-                android:id="@+id/b_obrona"
-                android:layout_width="170dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:backgroundTint="#0F4875"
-                android:minWidth="48dp"
-                android:onClick="back"
-                android:text="Obrona" />
-
-            <Button
-                android:id="@+id/b_atak"
-                android:layout_width="170dp"
-                android:layout_height="48dp"
-                android:backgroundTint="#9E1F1F"
-                android:onClick="confirm"
-                android:text="Atak">
-
-
-            </Button>
-
-        </TableRow>
-
 
     </LinearLayout>
 
