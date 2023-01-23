@@ -46,7 +46,7 @@ public class Shop extends AppCompatActivity {
         tv_gold = findViewById(R.id.tv_gold1);
         shop = findViewById(R.id.iv_miastowy);
 
-        tv_hp.setText(String.valueOf(H_hptemp)+"/"+String.valueOf(H_hpmaxtemp));
+        tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
         tv_atk.setText(String.valueOf(H_atktemp));
         tv_def.setText(String.valueOf(H_deftemp));
         tv_gold.setText(String.valueOf(H_goldtemp));
@@ -57,7 +57,8 @@ public class Shop extends AppCompatActivity {
         button1 = findViewById(R.id.b_opcja1);
         button2 = findViewById(R.id.b_opcja2);
 
-        if (City.who==0) {
+        //ZBROJMISTRZ
+        if (City.who == 0) {
             oferta.setText("Zaglądasz do Zbrojmistrza. Możesz u niego ulepszyć swój atak, by łatwiej trafić przecwnika.");
 
             choice1.setText("Ulepsz swój atak. (1G)");
@@ -69,20 +70,20 @@ public class Shop extends AppCompatActivity {
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(H_goldtemp>0){
+                    if (H_goldtemp > 0) {
                         H_goldtemp--;
                         H_atktemp++;
                         tv_atk.setText(String.valueOf(H_atktemp));
                         tv_gold.setText(String.valueOf(H_goldtemp));
-                    }
-                    else{
+                    } else {
                         Log.v("ZAKUP", "Heh KUP");
                     }
                 }
             });
 
         }
-        else if (City.who==1) {
+        //ALCHEMIK
+        else if (City.who == 1) {
             oferta.setText("Zaglądasz do Alchemika. Możesz u niego kupić mikstury wzmacniające twoją wytrzymałość, lub lecznicze, by zagoić rany.");
 
             choice1.setText("Kup miksturę leczniczą (1G)");
@@ -93,25 +94,22 @@ public class Shop extends AppCompatActivity {
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(H_goldtemp>0){
-                        if(H_hptemp+2>H_hpmaxtemp+1) {
+                    if (H_goldtemp > 0) {
+                        if (H_hptemp + 2 > H_hpmaxtemp + 1) {
                             tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
                             tv_gold.setText(String.valueOf(H_goldtemp));
-                        }
-                        else if(H_hptemp+2>H_hpmaxtemp) {
+                        } else if (H_hptemp + 2 > H_hpmaxtemp) {
                             H_goldtemp--;
                             H_hptemp++;
                             tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
                             tv_gold.setText(String.valueOf(H_goldtemp));
-                        }
-                        else {
+                        } else {
                             H_goldtemp--;
-                            H_hptemp=H_hptemp+2;
+                            H_hptemp = H_hptemp + 2;
                             tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
                             tv_gold.setText(String.valueOf(H_goldtemp));
                         }
-                    }
-                    else{
+                    } else {
                         Log.v("ZAKUP", "Heh KUP");
                     }
                 }
@@ -119,21 +117,22 @@ public class Shop extends AppCompatActivity {
 
             button2.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(H_goldtemp>1){
-                        H_goldtemp=H_goldtemp-2;
+                    if (H_goldtemp > 1) {
+                        H_goldtemp = H_goldtemp - 2;
                         H_hpmaxtemp++;
                         tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
                         tv_gold.setText(String.valueOf(H_goldtemp));
-                    }
-                    else{
+                    } else {
                         Log.v("ZAKUP", "Heh KUP");
                     }
                 }
             });
         }
+        //PŁATNERZ
         else {
             oferta.setText("Zaglądasz do Płatnerza. Możesz u niego ulepszyć swoją obronę, by lepiej bronić się przed atakami przeciwnika.");
-            choice1.setText("Ulepsz swoją obronę.");
+
+            choice1.setText("Ulepsz swoją obronę. (1G)");
             choice2.setText("");
             button1.setText("Kup");
             button2.setText("");
@@ -141,31 +140,23 @@ public class Shop extends AppCompatActivity {
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(H_goldtemp>0){
+                    if (H_goldtemp > 0) {
                         H_goldtemp--;
                         H_deftemp++;
-
-                        button1.setOnClickListener(new View.OnClickListener() {
-                            public void onClick(View v) {
-                                if(H_goldtemp>0){
-                                    H_goldtemp--;
-                                    H_deftemp++;
-                                    tv_def.setText(String.valueOf(H_deftemp));
-                                    tv_gold.setText(String.valueOf(H_goldtemp));
-                                }
-                                else{
-                                    Log.v("ZAKUP", "Heh KUP");
-                                }
-                            }
-                        });
-                    }
-                    else if (H_goldtemp<=0){
+                        tv_atk.setText(String.valueOf(H_deftemp));
+                        tv_gold.setText(String.valueOf(H_goldtemp));
+                    } else {
                         Log.v("ZAKUP", "Heh KUP");
                     }
                 }
             });
+
         }
     }
+
+
+
+
     public void back(View v) {
         Intent menuSwitch = new Intent(getApplicationContext(), City.class);
         startActivity(menuSwitch);
