@@ -19,29 +19,46 @@
             android:layout_height="wrap_content"
             android:text="Miasto" />
 
-        <ImageView
-            android:id="@+id/iv_zbroj"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:onClick="weaponsmith"
-            app:srcCompat="@drawable/zbrojmistrz"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="149dp" >
 
-        <ImageView
-            android:id="@+id/iv_alchemik"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:onClick="alchemist"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:src="@drawable/alchemik"/>
+            <ImageView
+                android:id="@+id/iv_zbroj"
+                android:layout_width="184dp"
+                android:layout_height="190dp"
+                android:onClick="weaponsmith"
+                app:srcCompat="@drawable/zbrojmistrz"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        <ImageView
-            android:id="@+id/iv_platnerz"
+            <ImageView
+                android:id="@+id/iv_alchemik"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:onClick="alchemist"
+                android:src="@drawable/alchemik"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:onClick="armorer"
-            app:srcCompat="@drawable/platnerz"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="189dp">
+
+            <ImageView
+                android:id="@+id/iv_platnerz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="armorer"
+                app:srcCompat="@drawable/platnerz"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </TableRow>
+
+        <ListView
+            android:id="@+id/lv_miastowe"
+            android:layout_width="match_parent"
+            android:layout_height="265dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -72,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#575757"
                 android:onClick="confirm"
-                android:text="Zatwierdź" >
+                android:text="Zatwierdź">
 
             </Button>
 
