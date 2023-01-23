@@ -2,6 +2,7 @@ package com.example.yourjourney;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,7 @@ public class Forest extends AppCompatActivity {
     Button b_decision2;
     Button b_decision3;
     public int place;
+    public int enemy;
     Random rand = new Random();
 
     @Override
@@ -45,7 +47,12 @@ public class Forest extends AppCompatActivity {
         b_decision2 = findViewById(R.id.b_decyzja2);
         b_decision3 = findViewById(R.id.b_decyzja3);
 
-        event1();
+        if(place==0) {event1();}
+        else if(place==1) {event2();}
+        else if(place==2) {event3();}
+        else if(place==3) {event4();}
+        else if(place==4) {event5();}
+        else if(place==5) {event6();}
     }
 
     //POCZĄTEK
@@ -65,12 +72,13 @@ public class Forest extends AppCompatActivity {
         });
         b_decision2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                event3();
+                event4();
             }
         });
         b_decision3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                event4();
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
             }
         });
     }
@@ -83,6 +91,23 @@ public class Forest extends AppCompatActivity {
         tv_decision1.setText("Zaatakuj go");
         tv_decision2.setText("Podejdź do niego");
         tv_decision3.setText("Zignoruj go");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent menuSwitch = new Intent(getApplicationContext(), gameover.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                event3();
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                event4();
+            }
+        });
     }
 
     public void  event3() {
@@ -99,9 +124,9 @@ public class Forest extends AppCompatActivity {
         place=3;
         title.setText("Wchodzisz do lasu");
         event.setImageResource(R.drawable.land2_pola);
-        brief.setText("");
-        tv_decision1.setText("idź na pole");
-        tv_decision2.setText("Idź do lasu");
+        brief.setText("Wchodząc do mrocznego lasu, zauważasz, że nie jesteś tu sam.");
+        tv_decision1.setText("O Bogowie! Walka!");
+        tv_decision2.setText("");
         tv_decision3.setText("Wróć do punktu zbornego.");
     }
 
@@ -110,8 +135,20 @@ public class Forest extends AppCompatActivity {
         title.setText("Zostań na chwilę i posłuchaj");
         event.setImageResource(R.drawable.przechodzien);
         brief.setText("Po pokonaniu stwora, przechodzień oferuje ci zapłatę w wysokości 5 sztuk złota za ocalenie mu życia.");
-        tv_decision1.setText("");
-        tv_decision2.setText("O nie! Jestesmy zgubieni!");
-        tv_decision3.setText("");
+        tv_decision1.setText("Przyjmę twój podarek. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
+        tv_decision2.setText("Nie musisz mi dziękować. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
+        tv_decision3.setText("Podwójne racje? Świetnie!");
     }
+
+    public void  event6() {
+        place=4;
+        title.setText("Zostań na chwilę i posłuchaj");
+        event.setImageResource(R.drawable.przechodzien);
+        brief.setText("Po pokonaniu stwora, przechodzień oferuje ci zapłatę w wysokości 5 sztuk złota za ocalenie mu życia.");
+        tv_decision1.setText("Przyjmę twój podarek. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
+        tv_decision2.setText("Nie musisz mi dziękować. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
+        tv_decision3.setText("Podwójne racje? Świetnie!");
+    }
+
+
 }
