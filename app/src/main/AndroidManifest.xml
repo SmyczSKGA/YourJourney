@@ -16,6 +16,20 @@
         android:theme="@style/Theme.YourJourney"
         tools:targetApi="31">
         <activity
+            android:name=".Fight"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".gameover"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Forest"
             android:exported="false">
             <meta-data

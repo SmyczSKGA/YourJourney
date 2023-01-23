@@ -30,6 +30,7 @@
             android:id="@+id/iv_zbroj"
             android:layout_width="match_parent"
             android:layout_height="280dp"
+            android:onClick="forest"
             app:srcCompat="@drawable/land2_pola" />
 
         <TableRow
