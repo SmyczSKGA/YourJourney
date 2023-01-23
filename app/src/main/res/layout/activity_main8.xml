@@ -28,7 +28,7 @@
             android:id="@+id/iv_miastowy"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:src="@drawable/stachu"/>
+            android:src="@drawable/przechodzien"/>
 
         <TextView
             android:id="@+id/tv_oferta"
