@@ -25,37 +25,63 @@
             android:text="Miastowe" />
 
         <ImageView
-            android:id="@+id/iv_przechodzien"
+            android:id="@+id/iv_miastowy"
             android:layout_width="match_parent"
             android:layout_height="210dp"
             app:srcCompat="?attr/listChoiceBackgroundIndicator" />
 
         <TextView
-            android:id="@+id/tv_oferta"
+            android:id="@+id/tv_komunikat"
             android:layout_width="match_parent"
-            android:layout_height="121dp"
+            android:layout_height="wrap_content"
             android:text="TextView" />
-
-        <CheckedTextView
-            android:id="@+id/ctv_wybor1"
-            android:layout_width="match_parent"
-            android:checked="true"
-            android:clickable="true"
-            android:layout_height="wrap_content" />
-
-        <CheckedTextView
-            android:id="@+id/ctv_wybor2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <CheckedTextView
-            android:id="@+id/ctv_wybor3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/tv_opcja1"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:background="#A5A8A0"
+                android:text="&quot;Towar 1&quot;"
+                android:textColor="#4E342E" />
+
+            <Button
+                android:id="@+id/b_opcja1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#601919"
+                android:text="Wybierz" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="77dp">
+
+            <TextView
+                android:id="@+id/tv_opcja2"
+                android:layout_width="269dp"
+                android:layout_height="wrap_content"
+                android:background="#A5A8A0"
+                android:text="&quot;Towar2&quot;"
+                android:textColor="#4E342E" />
+
+            <Button
+                android:id="@+id/b_opcja2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#601919"
+                android:text="Wybierz" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
 
             <TextView
                 android:id="@+id/Pusty_HP"
@@ -143,7 +169,7 @@
             <Button
                 android:id="@+id/b_reset"
                 android:layout_width="130dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:backgroundTint="#575757"
                 android:text="Reset">

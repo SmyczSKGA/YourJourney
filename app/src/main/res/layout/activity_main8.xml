@@ -24,7 +24,7 @@
             android:text="Spotykasz przechodnia" />
 
         <ImageView
-            android:id="@+id/iv_przechodzien"
+            android:id="@+id/iv_miastowy"
             android:layout_width="match_parent"
             android:layout_height="210dp"
             app:srcCompat="@drawable/przechodzien" />

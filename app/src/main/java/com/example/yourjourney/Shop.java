@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,9 +19,8 @@ public class Shop extends AppCompatActivity {
     TextView tv_def;
     TextView tv_gold;
     TextView oferta;
-    CheckedTextView choice1;
-    CheckedTextView choice2;
-    CheckedTextView choice3;
+    Button choice1;
+    Button choice2;
     int H_hptemp;
     int H_hpmaxtemp;
     int H_atktemp;
@@ -48,10 +48,9 @@ public class Shop extends AppCompatActivity {
         tv_def.setText(String.valueOf(H_deftemp));
         tv_gold.setText(String.valueOf(H_goldtemp));
 
-        oferta = findViewById(R.id.tv_oferta);;
-        choice1 = findViewById(R.id.ctv_wybor1);
-        choice2 = findViewById(R.id.ctv_wybor2);
-        choice3 = findViewById(R.id.ctv_wybor3);
+        oferta = findViewById(R.id.tv_komunikat);
+        choice1 = findViewById(R.id.b_opcja1);
+        choice2 = findViewById(R.id.b_opcja2);
 
         fail.makeText(this, "Za mało złota", Toast.LENGTH_SHORT);
         success.makeText(this, "Pomyślnie zakupiono", Toast.LENGTH_SHORT);
@@ -67,7 +66,6 @@ public class Shop extends AppCompatActivity {
                 public void onClick(View v) {
 
                         fail.show();
-
                 }
             });
         }
