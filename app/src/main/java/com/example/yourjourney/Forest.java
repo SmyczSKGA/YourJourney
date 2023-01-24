@@ -162,6 +162,31 @@ public class Forest extends AppCompatActivity {
         tv_decision1.setText("O Bogowie! Walka!");
         tv_decision2.setText("");
         tv_decision3.setText("Wróć do punktu zbornego.");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=5;
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=5;
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                place=5;
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
+                startActivity(menuSwitch);
+            }
+        });
     }
 
     public void  event5() {
@@ -172,6 +197,27 @@ public class Forest extends AppCompatActivity {
         tv_decision1.setText("Przyjmę twój podarek. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
         tv_decision2.setText("Nie musisz mi dziękować. Odprowadzę cię do miasta, jest tutaj zbyt niebezpiecznie");
         tv_decision3.setText("Podwójne racje? Świetnie!");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
     }
 
     public void  event6() {
@@ -182,6 +228,27 @@ public class Forest extends AppCompatActivity {
         tv_decision1.setText("Uciekajcie!");
         tv_decision2.setText("Zbyt Straszne!");
         tv_decision3.setText("Szok!");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                i = rand.nextInt((5 - 2 +1) +2);
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
     }
 
 

@@ -33,7 +33,7 @@ public class activity_main4 extends AppCompatActivity {
     public static int H_def; public int H_def_temp;
     public static int H_gold; public int H_gold_temp;
     public static String H_img;
-    String splitter;
+    public String splitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
