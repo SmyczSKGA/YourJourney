@@ -1,10 +1,9 @@
 package com.example.yourjourney;
 
+import androidx.appcompat.app.AppCompatActivity;
 import static com.example.yourjourney.Creatures.Creature.CreatureList;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -37,10 +36,7 @@ public class Fight extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main7);
-
-        String splitter = CreatureList.get(Forest.i).toString();
-        String[] separate = splitter.split(", ");
+        setContentView(R.layout.activity_fight);
 
         tv_hp = findViewById(R.id.tv_hp);
         tv_atk = findViewById(R.id.tv_atak_w);
@@ -54,13 +50,13 @@ public class Fight extends AppCompatActivity {
         tv_def.setText(String.valueOf(activity_main4.H_def));
         tv_gold.setText(String.valueOf(activity_main4.H_gold));
 
-        M_name = separate[0];
-        M_hp = Integer.valueOf(separate[1]);
-        M_hpmax = Integer.valueOf(separate[1]);
-        M_atk = Integer.valueOf(separate[2]);
-        M_def = Integer.valueOf(separate[3]);
-        M_gold = Integer.valueOf(separate[4]);
-        M_img = separate[5];
+        M_name = "Dzik";
+        M_hp = 4;
+        M_hpmax = 4;
+        M_atk = 2;
+        M_def = 2;
+        M_gold = 1;
+        M_img = "R.drawable.walka_dzik";
 
 
         img_hero.setImageResource(Integer.parseInt(activity_main4.H_img));
@@ -69,10 +65,10 @@ public class Fight extends AppCompatActivity {
 
 
     public void attack(){
-        roll_H = rand.nextInt((100 - 0) + 1) + 0;
+        roll_H = rand.nextInt((100 - 1 +1) + 1) + 0;
         chance_H = 20 + (10*(activity_main4.H_atk - M_def));
 
-        roll_M = rand.nextInt((100 - 0) + 1) + 0;
+        roll_M = rand.nextInt((100 - 1) + 1) + 0;
         chance_M = 20 + (10*(M_atk - activity_main4.H_def));
 
         if(chance_H>roll_H) {
@@ -92,7 +88,7 @@ public class Fight extends AppCompatActivity {
     }
 
     public void defence(){
-        roll_M = rand.nextInt((100 - 0) + 1) + 0;
+        roll_M = rand.nextInt((100 - 1) + 1) + 0;
         chance_M = 20 + (5*(M_atk - (activity_main4.H_def+activity_main4.H_def)));
 
         if(chance_M>roll_M) {

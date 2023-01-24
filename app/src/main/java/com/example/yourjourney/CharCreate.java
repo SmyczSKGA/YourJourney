@@ -85,7 +85,7 @@ public class CharCreate extends AppCompatActivity {
                     String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
                             +", "+Gold+", R.drawable.woj_ikona, ";
 
-                    new Creatures.Creature(login.getText().toString(), 5, 2, 5, 0, "R.drawable.lucznik_ikona");
+                    new Creatures.Creature(login.getText().toString(), 7, 3, 3, 0, "R.drawable.woj_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
@@ -96,7 +96,7 @@ public class CharCreate extends AppCompatActivity {
                     String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
                             +", "+Gold+", R.drawable.mag_ikona, ";
 
-                    new Creatures.Creature(login.getText().toString(), 7,3, 3, 0, "R.drawable.woj_ikona");
+                    new Creatures.Creature(login.getText().toString(), 4,1, 7, 0, "R.drawable.mag_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);
@@ -107,7 +107,7 @@ public class CharCreate extends AppCompatActivity {
                     String content = login.getText().toString() +", "+ HP.getText().toString() +", "+ATK.getText().toString() +", "+DEF.getText().toString()
                             +", "+Gold+", R.drawable.lucznik_ikona, ";
 
-                    new Creatures.Creature(login.getText().toString(), 4, 7, 1, 0, "R.drawable.mag_ikona");
+                    new Creatures.Creature(login.getText().toString(), 5, 5, 2, 0, "R.drawable.lucznik_ikona");
                     saveTextAsFile(filename, content);
 
                     Intent loadSwitch = new Intent(getApplicationContext(), activity_main4.class);

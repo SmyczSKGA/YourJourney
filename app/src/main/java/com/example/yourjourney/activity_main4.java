@@ -33,12 +33,16 @@ public class activity_main4 extends AppCompatActivity {
     public static int H_def; public int H_def_temp;
     public static int H_gold; public int H_gold_temp;
     public static String H_img;
-    String splitter = CreatureList.get(CreatureList.size() - 1).toString();
+    String splitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
+        splitter = CreatureList.get(CreatureList.size()-1).toString();
+
+        Log.i("LISTA", String.valueOf(CreatureList.size()));
 
         if(MainActivity.firsttime==true) {
             String[] separate = splitter.split(", ");

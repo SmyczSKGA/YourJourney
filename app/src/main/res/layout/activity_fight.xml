@@ -139,7 +139,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#0F4875"
                 android:minWidth="48dp"
-                android:onClick="back"
+                android:onClick="defence"
                 android:text="Obrona" />
 
             <Button
@@ -149,7 +149,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FFB7B7"
                 android:minWidth="48dp"
-                android:onClick="back"
+                android:onClick="surrender"
                 android:text="Poddaj się" />
 
 
@@ -158,7 +158,7 @@
                 android:layout_width="130dp"
                 android:layout_height="48dp"
                 android:backgroundTint="#9E1F1F"
-                android:onClick="confirm"
+                android:onClick="attack"
                 android:text="Atak">
 
             </Button>
@@ -166,6 +166,6 @@
         </TableRow>
 
 
-</LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
