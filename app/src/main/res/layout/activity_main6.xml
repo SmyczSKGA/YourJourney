@@ -171,6 +171,7 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:backgroundTint="#575757"
+                android:onClick="reset"
                 android:text="Reset">
 
             </Button>

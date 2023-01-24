@@ -141,7 +141,7 @@ public class Shop extends AppCompatActivity {
                     if (H_goldtemp > 0) {
                         H_goldtemp--;
                         H_deftemp++;
-                        tv_atk.setText(String.valueOf(H_deftemp));
+                        tv_def.setText(String.valueOf(H_deftemp));
                         tv_gold.setText(String.valueOf(H_goldtemp));
                     } else {
                         Log.v("ZAKUP", "Heh KUP");
@@ -174,5 +174,10 @@ public class Shop extends AppCompatActivity {
         H_deftemp = activity_main4.H_def;
         H_goldtemp = activity_main4.H_gold;
         Toast.makeText(this, "Zresetowano!", Toast.LENGTH_SHORT).show();
+
+        tv_hp.setText(String.valueOf(H_hptemp) + "/" + String.valueOf(H_hpmaxtemp));
+        tv_atk.setText(String.valueOf(H_atktemp));
+        tv_gold.setText(String.valueOf(H_goldtemp));
+        tv_def.setText(String.valueOf(H_deftemp));
     }
 }
