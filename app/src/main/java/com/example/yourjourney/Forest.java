@@ -64,6 +64,7 @@ public class Forest extends AppCompatActivity {
         else if(place==3) {event4();}
         else if(place==4) {event5();}
         else if(place==5) {event6();}
+        else if(place==6) {event7();}
     }
 
     //POCZĄTEK
@@ -126,9 +127,9 @@ public class Forest extends AppCompatActivity {
         title.setText("Nieznajomy");
         event.setImageResource(R.drawable.przechodzien);
         brief.setText("Gdy podchodzisz do przechodnia, zauważasz, że coś czyha w zaroślach, gdy tylko was zauważa rzuca się na was. Zaczyna się walka.");
-        tv_decision1.setText("Crap baskets");
-        tv_decision2.setText("O nie! Jestesmy zgubieni!");
-        tv_decision3.setText("I tak to wygram, bo to wersja demonstracyjna");
+        tv_decision1.setText("O nie! Jestesmy zgubieni!");
+        tv_decision2.setText("I tak to wygram, bo to wersja demonstracyjna");
+        tv_decision3.setText("Uciekaj w popłochu");
 
         b_decision1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -148,10 +149,7 @@ public class Forest extends AppCompatActivity {
         });
         b_decision3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                place=4;
-                i = rand.nextInt((5 - 2 +1) +2);
-                Intent menuSwitch = new Intent(getApplicationContext(), Fight.class);
-                startActivity(menuSwitch);
+                event7();
             }
         });
     }
@@ -162,8 +160,8 @@ public class Forest extends AppCompatActivity {
         event.setImageResource(R.drawable.land2_pola);
         brief.setText("Wchodząc do mrocznego lasu, zauważasz, że nie jesteś tu sam.");
         tv_decision1.setText("O Bogowie! Walka!");
-        tv_decision2.setText("");
-        tv_decision3.setText("Wróć do punktu zbornego.");
+        tv_decision2.setText("O nie! Jesteśmy zgubieni!");
+        tv_decision3.setText("I tak to wygram, bo to wersja demonstracyjna");
 
         b_decision1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -249,6 +247,34 @@ public class Forest extends AppCompatActivity {
                 i = rand.nextInt((5 - 2 +1) +2);
                 Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
                 startActivity(menuSwitch);
+            }
+        });
+    }
+
+    public void  event7() {
+        place=6;
+        title.setText("Uciekasz");
+        event.setImageResource(R.drawable.pathetic);
+        brief.setText("Uciekasz przed przeciwnikiem. Spoglądając przez ramię widzisz, jak przechodzień jest rozszarpywany przez stwora.");
+        tv_decision1.setText("Wracaj do miasta");
+        tv_decision2.setText("Wracaj do punktu zbornego");
+        tv_decision3.setText("Wracaj na rozdroże");
+
+        b_decision1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent menuSwitch = new Intent(getApplicationContext(), City.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent menuSwitch = new Intent(getApplicationContext(), activity_main4.class);
+                startActivity(menuSwitch);
+            }
+        });
+        b_decision3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                event1();
             }
         });
     }
