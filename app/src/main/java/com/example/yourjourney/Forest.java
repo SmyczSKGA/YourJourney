@@ -55,6 +55,8 @@ public class Forest extends AppCompatActivity {
 
         tv_hp.setText(String.valueOf(activity_main4.H_hp)+"/"+String.valueOf(activity_main4.H_hpmax));
         tv_gold.setText(String.valueOf(activity_main4.H_gold));
+        tv_atk.setText(String.valueOf(activity_main4.H_atk));
+        tv_def.setText(String.valueOf(activity_main4.H_def));
 
         if(place==0) {event1();}
         else if(place==1) {event2();}
